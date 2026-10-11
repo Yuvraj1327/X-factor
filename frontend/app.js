@@ -7,11 +7,19 @@ const FEST_HI = { Ganesh: "गणेश", Durga: "दुर्गा" };
 const TIER_HI = { HIGH: "उच्च / HIGH", MEDIUM: "मध्यम / MEDIUM", WATCH: "निगरानी / WATCH" };
 
 let ranking = null;
+async function getJSON(url) {
+  const r = await fetch(url, { signal: AbortSignal.timeout(25000) });
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  return r.json();
+}
 const briefCache = {};
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const pdf = (path) => (path ? API + path : "#");
 
+async function copy(text, ok) {
+  try { await navigator.clipboard.writeText(text); toast(ok); } catch { toast("कॉपी नहीं हुआ / Copy failed"); }
+}
 function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.add("show"); setTimeout(() => t.classList.remove("show"), 1800); }
 
 // ---- data helpers -------------------------------------------------------------------------------
@@ -31,7 +39,7 @@ function shortName(site) {
 
 function tagHi(t) {
   if (t.startsWith("temporary kund")) return "अस्थायी कुंड / temporary kund";
-  if (t.startsWith("near Upper Lake")) return "Upper Lake के पास: जल-आपूर्ति इनटेक कुएँ (lake report 2023-24 p.1-4)" + (t.includes("inferred") ? " · Upper Lake अनुमानित" : "");
+  if (t.startsWith("near Upper Lake")) return "Upper Lake के पास: जल-आपूर्ति इनटेक कुएँ" + (t.includes("inferred") ? " · Upper Lake अनुमानित" : "");
   if (t.startsWith("Lower Lake")) return "Lower Lake: 2025-26 में हर महीने BOD 3 mg/l से ऊपर, त्योहार हो या न हो (lake report p.9)";
   return t;
 }
@@ -97,8 +105,9 @@ function home() {
       const c = e.phases[p], b = band(c);
       const tip = `${FEST_HI[e.festival]} ${e.year} · ${PHASE_HI[p]}: ${c && c.status === "measured" ? c.value + " mg/l" : missingHi(c && c.missing_reason)}${c && c.page ? " · p." + c.page : ""}`;
       const href = c && c.pdf ? pdf(c.pdf) : null;
-      const inner = `<span class="cell ${b}${needsVerify(c) ? " v" : ""}" title="${esc(tip)}" aria-label="${esc(tip)}"></span>`;
-      return href ? `<a href="${href}" target="_blank" rel="noopener">${inner}</a>` : inner;
+      const cls = `cell ${b}${needsVerify(c) ? " v" : ""}`;
+      return href ? `<a href="${href}" target="_blank" rel="noopener" title="${esc(tip)}" aria-label="${esc(tip)}"><span class="${cls}"></span></a>`
+        : `<span class="${cls}" role="img" tabindex="0" title="${esc(tip)}" aria-label="${esc(tip)}"></span>`;
     }).join("")}</span>`).join("");
     return `<tr>
       <td>${g.rank}</td>
@@ -142,7 +151,7 @@ function home() {
   <div class="halves">
     <section class="card"><h2>रैंकिंग कैसे बनी / How the ranking works</h2>
       <p class="muted">केवल घुलित ऑक्सीजन पर: 5, 4 और 2 mg/l से कम रीडिंग, विसर्जन में 2 mg/l से ज़्यादा गिरावट, एक सप्ताह बाद सुधार न होना। रैंक सभी रीडिंग पर, एक न्यूनतम पर नहीं। BOD दिखाया, अंक नहीं।</p>
-      <a href="#/limits">Read more</a></section>
+      <a href="#/limits">और पढ़ें / Read more</a></section>
     <section class="card"><h2>यह डेटा क्या नहीं बताता / What this data does not cover</h2>
       <p class="muted">घाटों पर कोलीफॉर्म (बैक्टीरिया) जाँच नहीं · रिपोर्टों में इकाइयाँ छपी नहीं · हर चरण में एक ही नमूना; एक रीडिंग रुझान नहीं · कम DO विसर्जन से है या सीवेज से, डेटा अलग नहीं कर सकता</p>
       <a href="#/limits">सभी ${R.not_in_data.length} देखें →</a></section>
@@ -155,7 +164,7 @@ function home() {
 
 function detail(rank) {
   const R = ranking, g = R.ghats.find((x) => x.rank === rank);
-  if (!g) return `<p>Ghat not found. <a href="#/">Back</a></p>`;
+  if (!g) return `<p>घाट नहीं मिला / Ghat not found. <a href="#/">वापस / Back</a></p>`;
   const prev = R.ghats.find((x) => x.rank === rank - 1), next = R.ghats.find((x) => x.rank === rank + 1);
   const cells = g.oxygen_grid.flatMap((e) => PHASES.map((p) => e.phases[p])).filter((c) => c && c.status === "measured");
   const low = cells.reduce((a, c) => (a && a.value <= c.value ? a : c), null);
@@ -189,10 +198,10 @@ function detail(rank) {
     <div class="title-row"><div>
       <div class="muted">#${g.rank} / ${R.ghats.length}</div>
       <h1>${esc(g.site)} <span class="pill ${g.tier}">${TIER_HI[g.tier]}</span></h1>
-      <div>${g.tags.map((t) => `<span class="chip" title="${esc(t)}">${esc(tagHi(t))}</span>`).join("")}
+      <div>${g.tags.map((t) => `<span class="chip" title="${esc(t)}">${esc(tagHi(t))}</span>${t.startsWith("near Upper Lake") ? `<a class="pg" target="_blank" rel="noopener" href="${pdf("/reports/lake_2023-24_Upper.pdf#page=3")}">lake report 2023-24 p.1-4</a>` : t.startsWith("Lower Lake") ? `<a class="pg" target="_blank" rel="noopener" href="${pdf("/reports/lake_2025-26_Upper_Lower_monthly.pdf#page=9")}">lake 2025-26 p.9</a>` : ""}`).join("")}
         ${g.untested_latest_durga ? `<span class="nt striped">दुर्गा ${R.latest_durga}: जाँच नहीं · ${esc(missingHi((g.reasons.find((r) => r.text.startsWith("Not tested")) || {}).text))}</span>` : ""}</div>
-      ${g.tier_note ? `<p class="muted">↑ ${esc(g.tier_note)}</p>` : ""}
-      ${g.site_note ? `<p class="muted">⚠ ${esc(g.site_note)}</p>` : ""}
+      ${g.tier_note ? `<p class="muted">↑ स्तर बढ़ाया: रिकॉर्ड में लगभग शून्य DO और दुर्गा ${R.latest_durga} में जाँच नहीं; जाँच न होना साफ़ होना नहीं है। <small lang="en">${esc(g.tier_note)}</small></p>` : ""}
+      ${g.site_note ? `<p class="muted">⚠ ${g.site_note.includes("two sampling points") ? "दो नमूना-स्थल हो सकते हैं: गणेश और दुर्गा तालिकाओं में नाम अलग। " : ""}<small lang="en">${esc(g.site_note)}</small></p>` : ""}
     </div><div class="btns"><button class="btn solid" data-wa="hi"><span class="dot"></span>WhatsApp पर ब्रीफ भेजें</button><button class="btn" onclick="window.print()">प्रिंट A4</button></div></div>
     <div class="facts">
       <div><span class="muted">न्यूनतम DO / Lowest DO:</span><b>${low ? low.value + " mg/l" : "—"}</b>${lowVerify ? '<span class="vchip">पुष्टि करें</span> ' : ""}${low && low.page ? `<a class="pg" target="_blank" rel="noopener" href="${pdf(low.pdf)}">${low.pdf.match(/\d{4}/)[0]} p.${low.page}</a>` : ""}</div>
@@ -231,13 +240,13 @@ function letter(g) {
 
 async function getBrief(lang, format) {
   const k = lang + format;
-  if (!briefCache[k]) briefCache[k] = fetch(`${API}/brief?lang=${lang}&format=${format}`).then((r) => r.json());
+  if (!briefCache[k]) briefCache[k] = getJSON(`${API}/brief?lang=${lang}&format=${format}`).catch((e) => { delete briefCache[k]; throw e; });
   return briefCache[k];
 }
 
 function md(text) {
   return esc(text).split("\n").map((l) => {
-    l = l.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+    l = l.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\b(20\d\d) p\.(\d+)\b/g, (m) => pageChip(m));
     if (/^#+ /.test(l)) return `<h2>${l.replace(/^#+ /, "")}</h2>`;
     if (/^\s*[-–] /.test(l)) return `<div style="padding-left:14px">• ${l.replace(/^\s*[-–] /, "")}</div>`;
     return l.trim() ? `<div>${l}</div>` : "<br>";
@@ -266,13 +275,13 @@ function limits() {
   <h1 style="font-size:24px;margin:0 0 16px">डेटा की सीमाएँ / What this data does not cover</h1>
   <div class="grid2">
     <div>
-      <section class="card"><h2>रैंकिंग का आधार / How ghats are ranked</h2><p>${esc(R.how_ranked)}</p>
+      <section class="card"><h2>रैंकिंग का आधार / How ghats are ranked</h2><p>केवल घुलित ऑक्सीजन (DO) पर: 5, 4 और 2 mg/l से कम रीडिंग, विसर्जन में 2 mg/l से ज़्यादा गिरावट, एक सप्ताह बाद सुधार न होना। BOD दिखाया, अंक नहीं। धातु पर अंक नहीं (इकाइयाँ छपी नहीं)। रिकॉर्ड में लगभग शून्य DO और ताज़ा दुर्गा में जाँच नहीं तो स्तर उच्च।</p><p class="muted" lang="en">${esc(R.how_ranked)}</p>
         <p class="muted">Standard: CPCB Class ${esc(R.standard.class)}: DO ≥ ${R.standard.oxygen_min} mg/l, BOD ≤ ${R.standard.bod_max} mg/l. ${esc(R.standard.why)}</p></section>
       <section class="card" style="margin-top:24px"><h2>डेटा में नहीं / Not in the data</h2><ul>${R.not_in_data.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></section>
       <section class="card warn" style="margin-top:24px"><h2>डेटा चेतावनी / Data warnings</h2><ul>${R.data_warnings.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></section>
     </div>
     <div>
-      ${v ? `<section class="card"><h2>डेटा जाँच / Data check</h2><table class="dogrid"><tr><td class="lab">Report pages read twice</td><td>${v.pages}</td></tr><tr><td class="lab">Figures compared</td><td>${v.cells.toLocaleString("en-IN")}</td></tr><tr><td class="lab">Figures that agree</td><td>${(v.match || 0).toLocaleString("en-IN")}</td></tr></table><p class="muted">${esc(v.method)}</p></section>` : ""}
+      ${v ? `<section class="card"><h2>डेटा जाँच / Data check</h2><table class="dogrid"><tr><td class="lab">दो बार पढ़े गए रिपोर्ट पेज / Report pages read twice</td><td>${v.pages}</td></tr><tr><td class="lab">मिलाई गई संख्याएँ / Figures compared</td><td>${v.cells.toLocaleString("en-IN")}</td></tr><tr><td class="lab">मेल खाती संख्याएँ / Figures that agree</td><td>${(v.match || 0).toLocaleString("en-IN")}</td></tr></table><p class="muted">${esc(v.method)}</p></section>` : ""}
       ${k ? `<section class="card" style="margin-top:24px"><h2>कुंड बनाम नदी / Kunds vs rivers</h2><p class="muted">${esc(k.text)}</p></section>` : ""}
       <section class="card" style="margin-top:24px"><h2>झील की नियमित जाँच / Routine lake monitoring</h2><ul class="plain">${R.context.lake_baseline.map((l) => `<li class="muted" style="margin:6px 0">${esc(l.text.replace("Routine lake monitoring, not at the ghats: ", ""))} <a class="pg" target="_blank" rel="noopener" href="${pdf(l.pdf)}">PDF</a></li>`).join("")}</ul></section>
       <section class="card" style="margin-top:24px"><h2>स्रोत / Sources</h2><ul class="plain">${R.sources.map((s) => `<li><a target="_blank" rel="noopener" href="${pdf("/" + s)}">${esc(s.replace("reports/", ""))}</a></li>`).join("")}<li><a href="https://cpcb.gov.in/water-quality-criteria/" target="_blank" rel="noopener">CPCB Water Quality Criteria</a></li></ul></section>
@@ -341,14 +350,17 @@ async function render() {
   document.querySelectorAll(".nav a").forEach((a) => a.classList.toggle("on", a.dataset.route === route));
   const main = $("#main");
   try {
-    if (!ranking) ranking = await fetch(`${API}/ranking`).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+    if (!ranking) {
+      try { ranking = await getJSON(`${API}/ranking`); localStorage.setItem("ranking", JSON.stringify(ranking)); }
+      catch (e) { const saved = localStorage.getItem("ranking"); if (!saved) throw e; ranking = JSON.parse(saved); toast("सहेजी प्रति दिख रही है / Showing last saved copy"); }
+    }
     if (h.startsWith("#/ghat/")) main.innerHTML = detail(Number(h.split("/")[2]));
     else if (route === "brief") main.innerHTML = await brief(briefLang);
     else if (route === "limits") main.innerHTML = limits();
     else if (route === "upload") main.innerHTML = upload();
     else main.innerHTML = home();
   } catch (e) {
-    main.innerHTML = `<div class="card warn">डेटा लोड नहीं हुआ / Could not load data from the API (${esc(e.message)}). <button class="btn" onclick="location.reload()">Retry</button></div>`;
+    main.innerHTML = `<div class="card warn">डेटा लोड नहीं हुआ / Could not load data from the API (${esc(e.message)}). <button class="btn" onclick="render()">फिर कोशिश करें / Retry</button></div>`;
   }
   window.scrollTo(0, 0);
 }
@@ -357,16 +369,17 @@ document.addEventListener("click", async (ev) => {
   const t = ev.target.closest("button");
   if (!t) return;
   if (t.dataset.wa) {
-    const w = await getBrief(t.dataset.wa, "whatsapp");
-    window.open("https://wa.me/?text=" + encodeURIComponent(w.text), "_blank", "noopener");
+    const win = window.open("about:blank", "_blank");
+    try { const w = await getBrief(t.dataset.wa, "whatsapp"); if (win) win.location = "https://wa.me/?text=" + encodeURIComponent(w.text); }
+    catch (e) { if (win) win.close(); toast("ब्रीफ लोड नहीं हुआ / Brief could not load"); }
   } else if (t.dataset.lang) { briefLang = t.dataset.lang; render(); }
-  else if (t.hasAttribute("data-copy")) { await navigator.clipboard.writeText($("#brief-text").innerText); toast("कॉपी हो गया / Copied"); }
+  else if (t.hasAttribute("data-copy")) copy($("#brief-text").innerText, "कॉपी हो गया / Copied");
   else if (t.dataset.letter) {
     const g = ranking.ghats.find((x) => x.rank === Number(t.dataset.letter));
-    await navigator.clipboard.writeText(letter(g)); toast("पत्र का मसौदा कॉपी हुआ / Draft letter copied");
+    copy(letter(g), "पत्र का मसौदा कॉपी हुआ / Draft letter copied");
   } else if (t.dataset.size !== undefined) {
-    document.documentElement.style.setProperty("--fs", { "-1": "13px", "0": "15px", "1": "17px" }[t.dataset.size]);
-  } else if (t.id === "contrast") document.body.classList.toggle("contrast");
+    document.body.style.zoom = { "-1": "0.9", "0": "1", "1": "1.15" }[t.dataset.size];
+  } else if (t.id === "contrast") t.setAttribute("aria-pressed", document.body.classList.toggle("contrast"));
   else if (t.hasAttribute("data-demo")) {
     const csv = await fetch("demo_2026_ganesh_MADE_UP_VALUES.csv").then((x) => x.text());
     runUpload(csv, "demo_2026_ganesh_MADE_UP_VALUES.csv (डेमो / demo)");
