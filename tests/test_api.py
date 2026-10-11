@@ -81,7 +81,7 @@ def test_briefs_lead_with_not_tested_and_new_claim_words_blocked():
 def test_upload_preview_runs_pipeline_and_saves_nothing():
     from backend.facts import CLEAN
     before = (CLEAN / "bhopal_readings_clean.csv").read_bytes()
-    demo = (ROOT_DIR / "frontend" / "demo_2026_ganesh_MADE_UP_VALUES.csv").read_bytes()
+    demo = (ROOT_DIR / "data" / "demo" / "demo_2026_ganesh_MADE_UP_VALUES.csv").read_bytes()
     r = client.post("/upload/preview", content=demo, headers={"content-type": "text/csv"}).json()
     assert r["ok"] and r["saved"] is False and len(r["steps"]) == 6 and all(s["ok"] for s in r["steps"])
     assert len(r["ranking"]) == 7 and any("No report PDF for [2026]" in w for w in r["warnings"])

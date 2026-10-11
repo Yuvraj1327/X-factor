@@ -12,7 +12,7 @@ page 60 of an 87-page report.
 **What it gives the officer:** the 7 Bhopal ghats ranked by risk, each reason in plain words with every number linked to
 its report page, actions per ghat, and a one-page brief in English and Hindi to forward on WhatsApp.
 
-**Live API:** https://api-production-9a4c9.up.railway.app (docs: `/docs`)
+**Live app:** https://visarjan-ghat-watch-dusky.vercel.app · **Live API:** https://api-production-9a4c9.up.railway.app (docs: `/docs`)
 
 ## Run it (5 steps)
 
@@ -78,7 +78,8 @@ Doesn't / not covered:
 - One sample per phase per festival; newest data is 2025.
 - Metal readings are unverified (Ganesh 2024 runs 7-16x other festivals; Durga 2025 after-values copy pre-values).
 - Two sites may each be two sampling points (Rani Kamlapati / Kamla Park; Hathaikheda kund / dam).
-- No UI in this branch yet; see `API.md` for the contract.
+- This branch is the backend (data pipeline + API). The web UI lives on branch `Aradhya-frontend`, live at
+  https://visarjan-ghat-watch-dusky.vercel.app; it only calls the API described in `API.md`.
 
 ## Data
 

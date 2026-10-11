@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Visarjan Ghat Watch">
-  <rect width="64" height="64" rx="12" fill="#12355B"/>
-  <path d="M32 9c-7 10-12 16.5-12 23a12 12 0 0 0 24 0c0-6.5-5-13-12-23z" fill="#FF9933"/>
-  <path d="M27 33a5 5 0 0 0 5 5" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-  <path d="M10 48h44v4H10zM14 43h36v4H14zM18 38h28v4H18z" fill="#E4E7EC"/>
-  <path d="M8 55c4-2.5 8-2.5 12 0s8 2.5 12 0 8-2.5 12 0 8 2.5 12 0" stroke="#7FB3E6" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-</svg>
