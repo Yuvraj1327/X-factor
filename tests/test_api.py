@@ -4,7 +4,7 @@ from types import SimpleNamespace
 from fastapi.testclient import TestClient
 
 from backend.brief import load_facts, make_brief, passes, reason_hi
-from backend.main import app
+from backend.main import app, brief
 
 client = TestClient(app)
 FACTS = load_facts()
@@ -24,8 +24,9 @@ def test_evidence_links_serve_the_pdf():
 
 def test_brief_without_key_uses_checked_template(monkeypatch):
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    brief.cache_clear()
     for lang in ["en", "hi"]:
-        b = client.get(f"/brief?lang={lang}&refresh=true").json()
+        b = client.get(f"/brief?lang={lang}").json()
         assert b["source"] == "template" and passes(b["checks"])
         w = client.get(f"/brief?lang={lang}&format=whatsapp").json()
         assert passes(w["checks"]) and len(w["text"]) <= 1000
@@ -59,3 +60,7 @@ def test_invented_number_or_health_claim_falls_back_to_template():
 def test_retry_fixes_a_bad_first_draft():
     b = make_brief("en", client=FakeClaude("Oxygen was 0.37 mg/l.", "Oxygen was 0 mg/l (2023 p.60)."))
     assert b["source"] == "claude"
+
+
+def test_no_public_refresh():
+    assert "refresh" not in client.get("/openapi.json").text

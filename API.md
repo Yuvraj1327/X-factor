@@ -68,7 +68,7 @@ The officer's forwardable brief.
 - `source`: `claude` when the API key is set and the brief passed every check, else `template` (always works).
 - `checks` are empty lists on anything returned. Show a small "numbers checked against the data" note.
 - `format=whatsapp` is under 1,000 characters. Share link: `https://wa.me/?text=` + `encodeURIComponent(text)`.
-- `&refresh=true` regenerates; otherwise the brief is cached per data version.
+- The brief is generated once per data version and cached (no public refresh, so nobody can spend the API key).
 
 ## `GET /reports/<file>.pdf`
 

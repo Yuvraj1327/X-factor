@@ -1,7 +1,8 @@
 """Step 4: HTTP API for the officer dashboard.
 
 GET /ranking            ranked ghats with reasons, evidence rows and PDF page links (data/clean/ranking.json)
-GET /brief?lang=en|hi&format=page|whatsapp   forwardable brief, checked; Claude if ANTHROPIC_API_KEY is set
+GET /brief?lang=en|hi&format=page|whatsapp   forwardable brief, checked; Claude if ANTHROPIC_API_KEY is set,
+                        generated once per data version
 GET /reports/<file>.pdf the MPPCB source reports; evidence links add #page=N
 GET /health
 
@@ -11,7 +12,7 @@ import json
 from functools import lru_cache
 from typing import Literal
 
-from fastapi import FastAPI, Query
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
@@ -48,9 +49,7 @@ def get_ranking():
 
 
 @app.get("/brief")
-def get_brief(lang: Literal["en", "hi"] = "en", format: Literal["page", "whatsapp"] = "page",
-              refresh: bool = Query(False, description="Regenerate instead of using the cached brief")):
-    mtime = RANKING.stat().st_mtime
-    if refresh:
-        brief.cache_clear()
-    return brief(lang, format, mtime)
+def get_brief(lang: Literal["en", "hi"] = "en", format: Literal["page", "whatsapp"] = "page"):
+    # No public "refresh": the URL is open, so regenerating on demand would let anyone spend API credits.
+    # A new brief is made when the data changes (new mtime) or the service restarts.
+    return brief(lang, format, RANKING.stat().st_mtime)
