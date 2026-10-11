@@ -18,9 +18,9 @@ its report page, actions per ghat, and a one-page brief in English and Hindi to 
 
 ```bash
 git clone https://github.com/Yuvraj1327/X-factor.git && cd X-factor
-python -m venv .venv && source .venv/bin/activate
+python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-export ANTHROPIC_API_KEY=...        # optional: without it the brief uses the checked template
+export ANTHROPIC_API_KEY=...        # optional: only needed to regenerate briefs (python backend/brief.py)
 uvicorn backend.main:app            # open http://localhost:8000/docs
 ```
 
@@ -70,7 +70,8 @@ Works:
 - Cleaned data verified against the PDFs: 2023 (546/546 rows), 2024 (546/546), 2025 (all rows); lake baseline ~970 values.
 - Every printed cell read twice: Claude read all 19 report pages independently (`backend/verify_llm.py`) and code
   compared its reading with the parser's: 1,476 of 1,476 cells agree (`data/clean/llm_verification.csv`).
-- `/ranking`, `/brief` (English, Hindi, WhatsApp), PDF page links, 32 tests.
+- `/ranking`, `/brief` (English, Hindi, WhatsApp), PDF page links, 35 tests. Briefs are generated once with Claude,
+  read by a person, and served frozen (`data/clean/briefs.json`): no model call at request time.
 
 Doesn't / not covered:
 - No coliform test at the ghats, no temperature, no sampling time, no idol counts; units are assumed (not printed).
@@ -90,6 +91,11 @@ lake reports [2025-26](https://xgn.mp.nic.in/File_Upload/MONITORING//Yearly%20Wa
 [2003-2023](https://www.mppcb.mp.gov.in/proc/mon/comparatives-uppe-lak-lower-lake-2003-2023.pdf);
 [CPCB water quality criteria](https://cpcb.gov.in/water-quality-criteria/). No personal data. No extra data added.
 
-**Next year:** add `data/readings/bhopal_2026.csv` (same columns) and `reports/2026_<name>.pdf`, rerun the four scripts.
+**Next year:** add `data/readings/bhopal_2026.csv` (same columns) and `reports/2026_<name>.pdf`, rerun the four scripts,
+then `python backend/brief.py`. Still hard-coded for 2026: the visarjan and sampling dates in `facts.py` / `brief.py`,
+and the tier cut-offs (tuned on 2023-2025 data).
+
+**Caveat on the statewide comparison:** site type is read from site names, and the pre-immersion and one-week-after
+samples are not the same set of sites (temporary kunds have no pre sample).
 
 License: MIT.

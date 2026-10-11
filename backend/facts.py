@@ -192,7 +192,8 @@ def ghat(site, g, lim, latest_durga, lower_tag=None):
 
     actions = []
     if tier != "WATCH" or not below4.empty:
-        actions.append("Place aerators before 20 Oct and keep them running for the week after immersion")
+        actions.append("Place aerators in the kund before 20 Oct and run them for as long as it stands" if temporary
+                       else "Place aerators before 20 Oct and keep them running for the week after immersion")
     if latest_do.empty or temporary:
         actions.append("Ask MPPCB to sample before (by 18 Oct), during, and one week after (about 27 Oct)"
                        + ("; for a temporary kund, sample inside the kund while it stands" if temporary else ""))

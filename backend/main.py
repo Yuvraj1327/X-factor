@@ -1,8 +1,8 @@
 """Step 4: HTTP API for the officer dashboard.
 
 GET /ranking            ranked ghats with reasons, evidence rows and PDF page links (data/clean/ranking.json)
-GET /brief?lang=en|hi&format=page|whatsapp   forwardable brief, checked; Claude if ANTHROPIC_API_KEY is set,
-                        generated once per data version
+GET /brief?lang=en|hi&format=page|whatsapp   forwardable brief: the reviewed, frozen brief (briefs.json) or the
+                        checked template; never calls Claude at request time
 GET /reports/<file>.pdf the MPPCB source reports; evidence links add #page=N
 GET /health
 
@@ -13,10 +13,11 @@ from functools import lru_cache
 from typing import Literal
 
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from backend.brief import ROOT, make_brief
+from backend.brief import ROOT, served_brief
 
 RANKING = ROOT / "data" / "clean" / "ranking.json"
 
@@ -34,8 +35,12 @@ def ranking(mtime):
 
 @lru_cache
 def brief(lang, fmt, mtime):
-    # ponytail: one cached brief per data version; Claude is called at most once per language per deploy.
-    return make_brief(lang, fmt)
+    return served_brief(lang, fmt)
+
+
+@app.get("/", include_in_schema=False)
+def root():
+    return RedirectResponse("/docs")
 
 
 @app.get("/health")
@@ -50,6 +55,5 @@ def get_ranking():
 
 @app.get("/brief")
 def get_brief(lang: Literal["en", "hi"] = "en", format: Literal["page", "whatsapp"] = "page"):
-    # No public "refresh": the URL is open, so regenerating on demand would let anyone spend API credits.
-    # A new brief is made when the data changes (new mtime) or the service restarts.
+    # Frozen briefs from data/clean/briefs.json: fast, identical every time, and no API spend on an open URL.
     return brief(lang, format, RANKING.stat().st_mtime)

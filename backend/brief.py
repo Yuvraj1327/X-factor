@@ -8,7 +8,8 @@ Checks on any brief before it is shown:
 - every number must already be in llm_input.json (the LLM may not invent or compute)
 - no health or "safe/clean" wording (the data shows readings against limits, nothing more)
 
-Run from the repo root: python backend/brief.py  -> writes data/clean/brief_en.md, brief_hi.md
+Run from the repo root: python backend/brief.py  -> writes data/clean/briefs.json (+ brief_en.md, brief_hi.md)
+The API serves briefs.json as-is: briefs are made and read by a person once, never at request time.
 """
 import json
 import os
@@ -24,6 +25,9 @@ BANNED = [r"\bdiseases?\b", r"\billness", r"\bpoison", r"\btoxic", r"\bcancer", 
           r"\bunsafe\b", r"\bhealth\b",
           # Claims that water is fine; "not treated as clean" is allowed.
           r"\b(is|are|was|were|looks?|seems?) (clean|safe|fine)\b", r"\bsafe (to|for)\b", r"\bclean water\b",
+          r"\bharmful\b", r"\bdangerous\b", r"\bhealthy\b", r"\bfit (for|to)\b", r"\bwithin (the )?limits?\b",
+          r"\bcaused by\b", r"\bbecause of (the )?immersion\b", r"\bdrinkable\b",
+          "हानिकारक", "खतरनाक", "बीमार", "दूषित", "पीने योग्य", "स्वस्थ", "के कारण",
           "बीमारी", "रोग", "ज़हर", "जहर", "विषैल", "कैंसर", "संक्रमण", "सुरक्षित", "स्वास्थ्य", "साफ़ है", "साफ है", "स्वच्छ"]
 NUMBER = re.compile(r"\d+(?:\.\d+)?")
 
@@ -35,8 +39,9 @@ Rules:
 - A ghat that was not tested is "not tested", never clean or fine.
 - Do not mention health effects, disease, safety or cleanliness. Say "below the bathing limit" instead.
 - Do not claim immersion caused anything; the data cannot separate immersion from sewage.
-Structure: one-line purpose; the top 3 ghats (tier, 2 reasons, 2 actions each); one line on how ghats were ranked;
-3 data gaps; date of visarjan. Plain short sentences. No more than 250 words."""
+Structure: one-line purpose; the top 3 ghats (tier, 2 reasons, 2 actions each; if a ghat has a "Not tested" reason,
+it must be one of its 2 reasons); one sentence with the kund-versus-river finding from context; one line on how ghats
+were ranked; 3 data gaps; date of visarjan. Plain short sentences. No more than 250 words."""
 LANG = {"en": "Write the brief in English.",
         "hi": "Write the brief in simple Hindi (Devanagari). Keep ghat names, 'mg/l', 'BOD', 'MPPCB' and "
               "'CPCB' as they are. Use these Hindi terms, not English words: dissolved oxygen = घुली ऑक्सीजन (DO), "
@@ -103,6 +108,7 @@ REASON_HI = [
      lambda m: f"BOD {m[3]} में से {m[2]} रीडिंग में स्नान सीमा {m[1]} mg/l से अधिक (रिपोर्ट में BOD जाँच विधि नहीं छपी)"),
 ]
 ACTION_HI = [
+    ("Place aerators in the kund", "20 अक्टूबर से पहले कुंड में एरेटर लगाएँ और कुंड रहने तक चलाएँ"),
     ("Place aerators", "20 अक्टूबर से पहले एरेटर लगाएँ और विसर्जन के बाद एक सप्ताह तक चलाएँ"),
     ("Ask MPPCB to sample", "MPPCB से नमूने लेने को कहें: पहले (18 अक्टूबर तक), दौरान, और एक सप्ताह बाद (लगभग 27 अक्टूबर)"),
     ("Collect idols", "48 घंटे में मूर्तियाँ, फूल और बचा सामान हटाएँ (CPCB दिशानिर्देश, 2025 रिपोर्ट p.23)"),
@@ -129,6 +135,24 @@ def pages(r):
     return f" ({', '.join(r['pages'][:3])})" if r["pages"] else ""
 
 
+def kund_line(facts, lang):
+    """The statewide kund-versus-river finding, the main reason temporary kunds come first."""
+    text = next((c for c in facts["context"] if c.startswith("Across Madhya Pradesh")), "")
+    nums = re.findall(r"[\d.]+(?=%)", text)
+    if lang == "en" or len(nums) != 4:
+        return text
+    k, r, pre, after = nums
+    return (f"पूरे मध्य प्रदेश में कुंडों की {k}% रीडिंग में ऑक्सीजन 4 mg/l से कम थी, नदियों में {r}%। "
+            f"कुंडों में यह विसर्जन से पहले {pre}% नमूनों में और एक सप्ताह बाद {after}% नमूनों में थी।")
+
+
+def key_reasons(g, n=2):
+    """First reasons, but a "Not tested" reason always makes the cut: missing must show as missing."""
+    untested = [r for r in g["reasons"] if r["text"].startswith("Not tested")]
+    rest = [r for r in g["reasons"] if r not in untested]
+    return (untested + rest)[:n] if untested else rest[:n]
+
+
 def template_brief(facts, lang="en"):
     top = facts["ghats"][:TOP]
     date = "20 Oct 2026" if lang == "en" else "20 अक्टूबर 2026"
@@ -136,18 +160,20 @@ def template_brief(facts, lang="en"):
         lines = [f"Durga visarjan {date}: ghats that need attention first (MPPCB readings 2023-2025).", ""]
         for g in top:
             lines.append(f"{g['rank']}. {g['site']}: {g['tier']}" + (f" ({g['tier_note']})" if g["tier_note"] else ""))
-            lines += [f"   - {r['text']}{pages(r)}" for r in g["reasons"][:2]]
+            lines += [f"   - {r['text']}{pages(r)}" for r in key_reasons(g)]
             lines += [f"   > {a}" for a in g["actions"][:2]]
-        lines += ["", "How ranked: " + facts["how_ranked"].split(". ")[0] + ".", "", "Not in the data:"]
+        lines += ["", kund_line(facts, "en"), "", "How ranked: " + facts["how_ranked"].split(". ")[0] + ".", "",
+                  "Not in the data:"]
         lines += [f"- {x}" for x in facts["not_in_data"][:3]]
     else:
         lines = [f"दुर्गा विसर्जन {date}: किन घाटों पर पहले ध्यान दें (MPPCB रीडिंग 2023-2025)।", ""]
         for g in top:
             note = " (जाँच न होने से उच्च माना गया; जाँच न होना साफ़ होना नहीं है)" if g["tier_note"] else ""
             lines.append(f"{g['rank']}. {g['site']}: {TIER_HI[g['tier']]}{note}")
-            lines += [f"   - {reason_hi(r['text'])}{pages(r)}" for r in g["reasons"][:2]]
+            lines += [f"   - {reason_hi(r['text'])}{pages(r)}" for r in key_reasons(g)]
             lines += [f"   > {action_hi(a)}" for a in g["actions"][:2]]
-        lines += ["", "रैंकिंग का आधार: केवल घुली ऑक्सीजन (DO) की रीडिंग; BOD दिखाया है पर अंक नहीं दिए।", "",
+        lines += ["", kund_line(facts, "hi"), "",
+                  "रैंकिंग का आधार: केवल घुली ऑक्सीजन (DO) की रीडिंग; BOD दिखाया है पर अंक नहीं दिए।", "",
                   "डेटा में नहीं:", "- घाटों पर बैक्टीरिया (कोलिफॉर्म) की जाँच नहीं",
                   "- पानी का तापमान और नमूने का समय नहीं", "- रिपोर्ट में इकाइयाँ नहीं छपीं; मानक इकाइयाँ मानी गई हैं"]
     return "\n".join(lines)
@@ -158,14 +184,17 @@ def whatsapp_brief(facts, lang="en"):
     head = "Durga visarjan 20 Oct: priority ghats" if lang == "en" else "दुर्गा विसर्जन 20 अक्टूबर: प्राथमिक घाट"
     out = [head]
     for g in facts["ghats"][:TOP]:
-        # An untested ghat leads with that fact: it is why a raised ghat is HIGH.
-        reason = next((r["text"] for r in g["reasons"] if r["text"].startswith("Not tested")), g["reasons"][0]["text"])
-        action = g["actions"][0] if g["actions"] else ""
+        reasons = [r["text"].split(":")[0] for r in key_reasons(g)]  # "Not tested in Durga 2025" without the detail
+        # An untested ghat's first job is getting sampled; otherwise its first listed action.
+        action = next((a for a in g["actions"] if any(r["text"].startswith("Not tested") for r in g["reasons"])
+                       and a.startswith("Ask MPPCB to sample")),
+                      g["actions"][0] if g["actions"] else "")
         tier = g["tier"] if lang == "en" else TIER_HI[g["tier"]]
         if lang == "hi":
-            reason, action = reason_hi(reason), action_hi(action)
-        out.append(f"{g['rank']}. {g['site']} ({tier}): {reason}. {action}")
-    out.append("Source: MPPCB visarjan reports 2023-2025" if lang == "en" else "स्रोत: MPPCB विसर्जन रिपोर्ट 2023-2025")
+            reasons, action = [reason_hi(r) for r in reasons], action_hi(action)
+        out.append(f"{g['rank']}. {g['site']} ({tier}): {'; '.join(reasons)}. {action}")
+    out.append("No bacteria test at the ghats; units assumed. Source: MPPCB visarjan reports 2023-2025" if lang == "en"
+               else "घाटों पर बैक्टीरिया जाँच नहीं; इकाइयाँ मानी गई हैं। स्रोत: MPPCB विसर्जन रिपोर्ट 2023-2025")
     return "\n".join(out)
 
 
@@ -213,12 +242,28 @@ def make_brief(lang="en", fmt="page", facts=None, client=None, use_llm=None):
     return out | ({"llm_error": error} if error else {})
 
 
+BRIEFS = ROOT / "data" / "clean" / "briefs.json"
+
+
+def served_brief(lang, fmt):
+    """What the API returns: the frozen page brief if it still passes against today's facts, else the template."""
+    facts = load_facts()
+    if fmt == "page" and BRIEFS.exists():
+        b = json.loads(BRIEFS.read_text()).get(lang)
+        if b and passes(check(b["text"], facts)):
+            return b
+    return make_brief(lang, fmt, facts=facts, use_llm=False)
+
+
 if __name__ == "__main__":
     facts = load_facts()
+    frozen = {}
     for lang in ["en", "hi"]:
         b = make_brief(lang, facts=facts)
         assert passes(b["checks"]), b["checks"]
+        frozen[lang] = b
         (ROOT / "data" / "clean" / f"brief_{lang}.md").write_text(b["text"] + "\n")
         print(f"--- {lang} ({b['source']}) ---\n{b['text']}\n")
         w = make_brief(lang, "whatsapp", facts=facts)
         assert passes(w["checks"]) and len(w["text"]) <= 1000, (w["checks"], len(w["text"]))
+    BRIEFS.write_text(json.dumps(frozen, indent=2, ensure_ascii=False) + "\n")

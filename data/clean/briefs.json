@@ -1,0 +1,22 @@
+{
+  "en": {
+    "lang": "en",
+    "format": "page",
+    "source": "claude",
+    "text": "# Durga Visarjan Brief: Bhopal Ghats\n\n**Purpose:** Where to focus effort at Bhopal immersion ghats for Durga visarjan, based on MPPCB immersion data.\n\n**1. Bairagarh (Sant Hirdaram) kund (HIGH)**\n- Dissolved oxygen was below the bathing limit of 5 mg/l in 11 of 13 readings (2023 p.26, 2023 p.60, 2024 p.25, 2024 p.69, 2025 p.28).\n- Not tested in Durga 2025. The report has no table for this site.\n- Action: Ask MPPCB to sample before (by 18 Oct), during, and one week after (about 27 Oct). Sample inside the kund while it stands.\n- Action: Keep immersion out of the open Upper Lake, which has water-supply intake wells (lake report 2023-24 p.1-4).\n\n**2. Malikhedi kund (HIGH)**\n- Near-zero oxygen (below 2 mg/l) was recorded in 1 reading, lowest 0.6 mg/l (2025 p.29).\n- Not tested in Durga 2025. The report has no table for this site.\n- Action: Place aerators in the kund before 20 Oct. Run them for as long as it stands.\n- Action: Ask MPPCB to sample before (by 18 Oct), during, and one week after (about 27 Oct).\n\n**3. Rani Kamlapati ghat / Kamla Park kund (MEDIUM)**\n- Dissolved oxygen was below the bathing limit of 5 mg/l in 6 of 18 readings (2024 p.70, 2025 p.64).\n- In Durga 2025, oxygen was 2.4 mg/l during immersion. It was already 2.5 mg/l before immersion (2025 p.64).\n- Action: Place aerators before 20 Oct. Keep them running for the week after immersion.\n- Action: Collect idols, flowers and left-over material within 48 hours (CPCB guideline, 2025 report p.23).\n\n**Kund versus river:** Across Madhya Pradesh, oxygen was below 4 mg/l in 11.5% of kund readings vs 2.7% of river readings.\n\n**How ranked:** Ghats were ranked on dissolved oxygen only. BOD and metals were not scored.\n\n**Data gaps:**\n- There is no coliform (bacteria) test at the ghats.\n- Units are not printed in the MPPCB immersion reports.\n- The data cannot separate immersion from sewage as the cause of low oxygen.\n\n**Visarjan date:** 2026-10-20",
+    "checks": {
+      "unknown_numbers": [],
+      "banned_words": []
+    }
+  },
+  "hi": {
+    "lang": "hi",
+    "format": "page",
+    "source": "claude",
+    "text": "**दुर्गा विसर्जन ब्रीफ: Bhopal**\n\n**उद्देश्य:** विसर्जन से पहले किन घाटों पर पहले ध्यान देना है, यह तय करना।\n\n**1. Bairagarh (Sant Hirdaram) kund: उच्च जोखिम**\n- 13 में से 11 रीडिंग में घुली ऑक्सीजन (DO) 5 mg/l की स्नान सीमा से कम थी (2023 p.26, 2023 p.60, 2024 p.25, 2024 p.69, 2025 p.28)।\n- दुर्गा 2025 में जाँच नहीं हुई। रिपोर्ट में इस स्थल की तालिका नहीं है।\n- कार्य: MPPCB से नमूने लेने को कहें: विसर्जन से पहले (18 अक्टूबर तक), दौरान, और एक सप्ताह बाद (लगभग 27 अक्टूबर)। नमूना अस्थायी कुंड के अंदर लें।\n- कार्य: विसर्जन खुली Upper Lake में न होने दें। वहाँ जल-आपूर्ति के इनटेक कुएँ हैं (lake report 2023-24 p.1-4)।\n\n**2. Malikhedi kund: उच्च जोखिम**\nरिकॉर्ड में लगभग शून्य DO है और दुर्गा 2025 में जाँच नहीं हुई। इसलिए इसे उच्च जोखिम में रखा गया।\n- 13 में से 9 रीडिंग में DO स्नान सीमा 5 mg/l से कम थी (2023 p.27, 2023 p.61, 2024 p.26, 2024 p.71, 2025 p.29)।\n- दुर्गा 2025 में जाँच नहीं हुई। रिपोर्ट में तालिका नहीं है।\n- कार्य: 20 अक्टूबर से पहले कुंड में एरेटर लगाएँ। कुंड रहने तक उन्हें चलाएँ।\n- कार्य: MPPCB से विसर्जन से पहले / दौरान / एक सप्ताह बाद कुंड के अंदर नमूने लेने को कहें।\n\n**3. Rani Kamlapati ghat / Kamla Park kund: मध्यम जोखिम**\n- 18 में से 6 रीडिंग में DO स्नान सीमा 5 mg/l से कम थी (2024 p.70, 2025 p.64)।\n- दुर्गा 2025 में DO विसर्जन के दौरान 2.4 mg/l था। विसर्जन से पहले ही यह 2.5 mg/l था (2025 p.64)।\n- कार्य: 20 अक्टूबर से पहले एरेटर लगाएँ। विसर्जन के एक सप्ताह बाद तक उन्हें चलाएँ।\n- कार्य: मूर्तियाँ, फूल और बचा सामान 48 घंटे में हटाएँ (CPCB guideline, 2025 report p.23)।\n\n**संदर्भ:** पूरे मध्य प्रदेश में कुंड की 11.5% रीडिंग में DO 4 mg/l से कम था, जबकि नदी की 2.7% रीडिंग में।\n\n**रैंकिंग का आधार:** रैंकिंग केवल घुली ऑक्सीजन (DO) पर आधारित है। BOD दिखाया गया है, पर उसके अंक नहीं दिए गए।\n\n**डेटा की कमियाँ:**\n- MPPCB विसर्जन रिपोर्टों में इकाइयाँ छपी नहीं हैं।\n- हर चरण में केवल एक नमूना है। एक रीडिंग से रुझान नहीं बनता।\n- आँकड़े यह अलग नहीं कर सकते कि कम DO का कारण विसर्जन है या सीवेज।\n\n**विसर्जन तिथि:** 2026-10-20",
+    "checks": {
+      "unknown_numbers": [],
+      "banned_words": []
+    }
+  }
+}

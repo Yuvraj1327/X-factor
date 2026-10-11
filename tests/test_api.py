@@ -22,12 +22,12 @@ def test_evidence_links_serve_the_pdf():
     assert resp.status_code == 200 and resp.headers["content-type"] == "application/pdf"
 
 
-def test_brief_without_key_uses_checked_template(monkeypatch):
+def test_brief_is_served_without_calling_claude(monkeypatch):
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
     brief.cache_clear()
     for lang in ["en", "hi"]:
         b = client.get(f"/brief?lang={lang}").json()
-        assert b["source"] == "template" and passes(b["checks"])
+        assert passes(b["checks"])
         w = client.get(f"/brief?lang={lang}&format=whatsapp").json()
         assert passes(w["checks"]) and len(w["text"]) <= 1000
 
@@ -64,3 +64,14 @@ def test_retry_fixes_a_bad_first_draft():
 
 def test_no_public_refresh():
     assert "refresh" not in client.get("/openapi.json").text
+
+
+def test_root_redirects_to_docs():
+    assert client.get("/", follow_redirects=False).headers["location"] == "/docs"
+
+
+def test_briefs_lead_with_not_tested_and_new_claim_words_blocked():
+    from backend.brief import template_brief, whatsapp_brief, banned_words
+    for text in [template_brief(FACTS, "en"), whatsapp_brief(FACTS, "en")]:
+        assert "Not tested in Durga" in text.split("2. ")[0]          # the #1 ghat says it
+    assert banned_words("caused by idol immersion; harmful") and banned_words("पानी दूषित है")
