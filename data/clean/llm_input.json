@@ -1,0 +1,440 @@
+{
+  "visarjan_date": "2026-10-20",
+  "how_ranked": "Ranked on dissolved oxygen only: readings below 5, 4 and 2 mg/l, drops of more than 2 mg/l during immersion, and no recovery a week later. BOD is shown but not scored because it is above the limit at almost every ghat. Metals are not scored because units are not printed and labs disagree. Ghats with fewer readings (temporary kunds, untested festivals) can score lower than their real risk; read the Not tested reasons. A ghat with near-zero oxygen on record that was not tested in the latest Durga is raised to HIGH. Equal points are ties.",
+  "standard": {
+    "class": "B (organised outdoor bathing)",
+    "oxygen_min": 5.0,
+    "bod_max": 3.0,
+    "fish_oxygen_min": 4.0
+  },
+  "ghats": [
+    {
+      "rank": 1,
+      "site": "Bairagarh (Sant Hirdaram) kund",
+      "tier": "HIGH",
+      "points": 29,
+      "tied_with": [],
+      "tier_note": "",
+      "tags": [
+        "temporary kund",
+        "near Upper Lake, which has water-supply intake wells (lake report 2023-24 p.1-4)"
+      ],
+      "reasons": [
+        {
+          "text": "Dissolved oxygen below the bathing limit of 5 mg/l in 11 of 13 readings",
+          "pages": [
+            "2023 p.26",
+            "2023 p.60",
+            "2024 p.25",
+            "2024 p.69",
+            "2025 p.28"
+          ]
+        },
+        {
+          "text": "Near-zero oxygen (below 2 mg/l) in 4 readings, lowest 0 mg/l (printed as 0 in the report; verify with MPPCB)",
+          "pages": [
+            "2023 p.26",
+            "2023 p.60",
+            "2025 p.28"
+          ]
+        },
+        {
+          "text": "Not tested in Durga 2025: no table for this site in the report",
+          "pages": []
+        },
+        {
+          "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 3 of 4 festivals",
+          "pages": [
+            "2023 p.26",
+            "2024 p.25",
+            "2024 p.69"
+          ]
+        },
+        {
+          "text": "Temporary kund: no before or after sample in Ganesh 2025 because the kund was not built yet or already dismantled (report remark)",
+          "pages": [
+            "2025 p.28"
+          ]
+        },
+        {
+          "text": "BOD above the bathing limit of 3 mg/l in 13 of 13 readings",
+          "pages": [
+            "2023 p.26",
+            "2023 p.60",
+            "2024 p.25",
+            "2024 p.69",
+            "2025 p.28"
+          ]
+        }
+      ],
+      "actions": [
+        "Place aerators before 20 Oct and keep them running for the week after immersion",
+        "Ask MPPCB to sample before (by 18 Oct), during, and one week after (about 27 Oct); for a temporary kund, sample inside the kund while it stands",
+        "Collect idols, flowers and left-over material within 48 hours (CPCB guideline, 2025 report p.23)",
+        "Keep separate bins for flowers and puja material so they stay out of the water",
+        "Line the temporary kund with a removable synthetic liner (CPCB guideline, 2025 report p.14)",
+        "Keep immersion out of the open Upper Lake, which feeds water-supply intakes (NGT order OA 673/2018, 2025 report p.2)",
+        "Ask MPPCB to confirm the flagged readings (see verify) and their units"
+      ],
+      "verify": [
+        "Dissolved oxygen 0 (Durga 2023, pre): zero oxygen: verify with MPPCB",
+        "Dissolved oxygen 0 (Durga 2023, during): zero oxygen: verify with MPPCB",
+        "Dissolved oxygen 0 (Ganesh 2023, after): zero oxygen: verify with MPPCB",
+        "Lead 1.77 (Ganesh 2024, after): unusually high metal, unit not printed: verify",
+        "Dissolved oxygen 0 (Ganesh 2025, during): zero oxygen: verify with MPPCB"
+      ],
+      "site_note": ""
+    },
+    {
+      "rank": 2,
+      "site": "Malikhedi kund",
+      "tier": "HIGH",
+      "points": 19,
+      "tied_with": [],
+      "tier_note": "Raised to HIGH: near-zero oxygen on record and not tested in Durga 2025; unknown is not safe",
+      "tags": [
+        "temporary kund"
+      ],
+      "reasons": [
+        {
+          "text": "Dissolved oxygen below the bathing limit of 5 mg/l in 9 of 13 readings",
+          "pages": [
+            "2023 p.27",
+            "2023 p.61",
+            "2024 p.26",
+            "2024 p.71",
+            "2025 p.29"
+          ]
+        },
+        {
+          "text": "Near-zero oxygen (below 2 mg/l) in 1 reading, lowest 0.6 mg/l",
+          "pages": [
+            "2025 p.29"
+          ]
+        },
+        {
+          "text": "Not tested in Durga 2025: no table for this site in the report",
+          "pages": []
+        },
+        {
+          "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 1 of 4 festivals",
+          "pages": [
+            "2023 p.27"
+          ]
+        },
+        {
+          "text": "Temporary kund: no before or after sample in Ganesh 2025 because the kund was not built yet or already dismantled (report remark)",
+          "pages": [
+            "2025 p.29"
+          ]
+        },
+        {
+          "text": "BOD above the bathing limit of 3 mg/l in 11 of 13 readings",
+          "pages": [
+            "2023 p.27",
+            "2023 p.61",
+            "2024 p.26",
+            "2024 p.71",
+            "2025 p.29"
+          ]
+        }
+      ],
+      "actions": [
+        "Place aerators before 20 Oct and keep them running for the week after immersion",
+        "Ask MPPCB to sample before (by 18 Oct), during, and one week after (about 27 Oct); for a temporary kund, sample inside the kund while it stands",
+        "Collect idols, flowers and left-over material within 48 hours (CPCB guideline, 2025 report p.23)",
+        "Keep separate bins for flowers and puja material so they stay out of the water",
+        "Line the temporary kund with a removable synthetic liner (CPCB guideline, 2025 report p.14)",
+        "Ask MPPCB to confirm the flagged readings (see verify) and their units"
+      ],
+      "verify": [
+        "Dissolved oxygen 10.4 (Durga 2023, after): unusually high oxygen: verify"
+      ],
+      "site_note": "Temporary kund; no water body printed in the reports."
+    },
+    {
+      "rank": 3,
+      "site": "Rani Kamlapati ghat / Kamla Park kund",
+      "tier": "MEDIUM",
+      "points": 17,
+      "tied_with": [],
+      "tier_note": "",
+      "tags": [
+        "Lower Lake: BOD above the bathing limit in all 11 months sampled, Apr 2025 to Mar 2026, festival and non-festival months alike (lake report 2025-26 p.9)"
+      ],
+      "reasons": [
+        {
+          "text": "Dissolved oxygen below the bathing limit of 5 mg/l in 6 of 18 readings",
+          "pages": [
+            "2024 p.70",
+            "2025 p.64"
+          ]
+        },
+        {
+          "text": "In Durga 2025, oxygen was 2.4 mg/l in the during-immersion sample (already below the limit before immersion)",
+          "pages": [
+            "2025 p.64"
+          ]
+        },
+        {
+          "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 3 of 6 festivals",
+          "pages": [
+            "2024 p.24",
+            "2024 p.70",
+            "2025 p.29"
+          ]
+        },
+        {
+          "text": "BOD above the bathing limit of 3 mg/l in 18 of 18 readings",
+          "pages": [
+            "2023 p.27",
+            "2023 p.59",
+            "2024 p.24",
+            "2024 p.70",
+            "2025 p.29",
+            "2025 p.64"
+          ]
+        }
+      ],
+      "actions": [
+        "Place aerators before 20 Oct and keep them running for the week after immersion",
+        "Collect idols, flowers and left-over material within 48 hours (CPCB guideline, 2025 report p.23)",
+        "Keep separate bins for flowers and puja material so they stay out of the water"
+      ],
+      "verify": [],
+      "site_note": "Ganesh tables say Kamla Park kund, Durga tables say Rani Kamlapati ghat (Lower Lake). May be two sampling points."
+    },
+    {
+      "rank": 4,
+      "site": "Shahpura lake ghat",
+      "tier": "MEDIUM",
+      "points": 14,
+      "tied_with": [],
+      "tier_note": "",
+      "tags": [],
+      "reasons": [
+        {
+          "text": "Dissolved oxygen below the bathing limit of 5 mg/l in 5 of 18 readings",
+          "pages": [
+            "2023 p.60",
+            "2024 p.26",
+            "2025 p.65"
+          ]
+        },
+        {
+          "text": "In Durga 2025, oxygen was 2.5 mg/l in the pre-immersion sample (already below the limit before immersion)",
+          "pages": [
+            "2025 p.65"
+          ]
+        },
+        {
+          "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 3 of 6 festivals",
+          "pages": [
+            "2023 p.28",
+            "2024 p.26",
+            "2024 p.72"
+          ]
+        },
+        {
+          "text": "BOD above the bathing limit of 3 mg/l in 18 of 18 readings",
+          "pages": [
+            "2023 p.28",
+            "2023 p.60",
+            "2024 p.26",
+            "2024 p.72",
+            "2025 p.30",
+            "2025 p.65"
+          ]
+        }
+      ],
+      "actions": [
+        "Place aerators before 20 Oct and keep them running for the week after immersion",
+        "Collect idols, flowers and left-over material within 48 hours (CPCB guideline, 2025 report p.23)",
+        "Keep separate bins for flowers and puja material so they stay out of the water"
+      ],
+      "verify": [],
+      "site_note": ""
+    },
+    {
+      "rank": 5,
+      "site": "Khatlapura ghat",
+      "tier": "MEDIUM",
+      "points": 12,
+      "tied_with": [],
+      "tier_note": "",
+      "tags": [
+        "Lower Lake: BOD above the bathing limit in all 11 months sampled, Apr 2025 to Mar 2026, festival and non-festival months alike (lake report 2025-26 p.9)"
+      ],
+      "reasons": [
+        {
+          "text": "Dissolved oxygen below the bathing limit of 5 mg/l in 8 of 18 readings",
+          "pages": [
+            "2023 p.59",
+            "2024 p.24",
+            "2024 p.69"
+          ]
+        },
+        {
+          "text": "Oxygen dropped by more than 2 mg/l during immersion in Durga 2024",
+          "pages": [
+            "2024 p.24"
+          ]
+        },
+        {
+          "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 2 of 6 festivals",
+          "pages": [
+            "2024 p.24",
+            "2025 p.28"
+          ]
+        },
+        {
+          "text": "BOD above the bathing limit of 3 mg/l in 15 of 17 readings",
+          "pages": [
+            "2023 p.26",
+            "2023 p.59",
+            "2024 p.24",
+            "2024 p.69",
+            "2025 p.28",
+            "2025 p.64"
+          ]
+        }
+      ],
+      "actions": [
+        "Place aerators before 20 Oct and keep them running for the week after immersion",
+        "Collect idols, flowers and left-over material within 48 hours (CPCB guideline, 2025 report p.23)",
+        "Keep separate bins for flowers and puja material so they stay out of the water",
+        "Ask MPPCB to confirm the flagged readings (see verify) and their units"
+      ],
+      "verify": [
+        "Chromium 1.98 (Ganesh 2024, during): unusually high metal, unit not printed: verify",
+        "Lead 1.266 (Ganesh 2024, after): unusually high metal, unit not printed: verify"
+      ],
+      "site_note": ""
+    },
+    {
+      "rank": 6,
+      "site": "Hathaikheda dam / kund",
+      "tier": "WATCH",
+      "points": 6,
+      "tied_with": [],
+      "tier_note": "",
+      "tags": [],
+      "reasons": [
+        {
+          "text": "Dissolved oxygen below the bathing limit of 5 mg/l in 0 of 18 readings",
+          "pages": []
+        },
+        {
+          "text": "Oxygen dropped by more than 2 mg/l during immersion in Durga 2024, Ganesh 2024",
+          "pages": [
+            "2024 p.23",
+            "2024 p.71"
+          ]
+        },
+        {
+          "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 2 of 6 festivals",
+          "pages": [
+            "2023 p.27",
+            "2024 p.23"
+          ]
+        },
+        {
+          "text": "BOD above the bathing limit of 3 mg/l in 16 of 18 readings",
+          "pages": [
+            "2023 p.27",
+            "2023 p.59",
+            "2024 p.23",
+            "2024 p.71",
+            "2025 p.29",
+            "2025 p.64"
+          ]
+        }
+      ],
+      "actions": [
+        "Collect idols, flowers and left-over material within 48 hours (CPCB guideline, 2025 report p.23)",
+        "Keep separate bins for flowers and puja material so they stay out of the water",
+        "Ask MPPCB to confirm the flagged readings (see verify) and their units"
+      ],
+      "verify": [
+        "Dissolved oxygen 10.2 (Durga 2023, during): unusually high oxygen: verify",
+        "Lead 0.537 (Ganesh 2024, during): unusually high metal, unit not printed: verify",
+        "Dissolved oxygen 11 (Ganesh 2024, after): unusually high oxygen: verify",
+        "Dissolved oxygen 10.8 (Durga 2025, after): unusually high oxygen: verify"
+      ],
+      "site_note": "Ganesh tables say visarjan kund, Durga tables say dam ghat. May be two sampling points."
+    },
+    {
+      "rank": 7,
+      "site": "Prempura ghat",
+      "tier": "WATCH",
+      "points": 5,
+      "tied_with": [],
+      "tier_note": "",
+      "tags": [
+        "near Upper Lake, which has water-supply intake wells (lake report 2023-24 p.1-4); Upper Lake inferred, not printed"
+      ],
+      "reasons": [
+        {
+          "text": "Dissolved oxygen below the bathing limit of 5 mg/l in 3 of 18 readings",
+          "pages": [
+            "2024 p.70",
+            "2025 p.65"
+          ]
+        },
+        {
+          "text": "In Durga 2025, oxygen was 4.9 mg/l in the during-immersion sample",
+          "pages": [
+            "2025 p.65"
+          ]
+        },
+        {
+          "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 0 of 6 festivals",
+          "pages": []
+        },
+        {
+          "text": "BOD above the bathing limit of 3 mg/l in 9 of 15 readings",
+          "pages": [
+            "2024 p.25",
+            "2024 p.70",
+            "2025 p.28",
+            "2025 p.65"
+          ]
+        }
+      ],
+      "actions": [
+        "Place aerators before 20 Oct and keep them running for the week after immersion",
+        "Keep separate bins for flowers and puja material so they stay out of the water",
+        "Keep immersion out of the open Upper Lake, which feeds water-supply intakes (NGT order OA 673/2018, 2025 report p.2)"
+      ],
+      "verify": [],
+      "site_note": "No water body printed; Upper Lake is inferred."
+    }
+  ],
+  "context": [
+    "Across Madhya Pradesh, oxygen was below 4 mg/l in 11.5% of kund readings vs 2.7% of river readings. In kunds, 3.5% of pre-immersion samples were below 4 mg/l vs 16.8% of samples one week after.",
+    "Routine lake monitoring, not at the ghats: Upper Lake, Bairagarh intake (2025-26 average): oxygen 6.86 mg/l, BOD 1.94 mg/l, fecal coliform 22.38 MPN/100 ml",
+    "Routine lake monitoring, not at the ghats: Lower Lake, Kalighat spill outlet (2025-26 average): oxygen 5.2 mg/l, BOD 5.54 mg/l, fecal coliform at least 977.27 MPN/100 ml",
+    "Routine lake monitoring, not at the ghats: Upper Lake, Kamla Park intake (2025-26 average): oxygen 6.63 mg/l, BOD 1.68 mg/l, fecal coliform 13.29 MPN/100 ml",
+    "Routine lake monitoring, not at the ghats: Upper Lake, Karbala intake (2025-26 average): oxygen 6.72 mg/l, BOD 1.79 mg/l, fecal coliform 15.47 MPN/100 ml",
+    "Routine lake monitoring, not at the ghats: Upper Lake, Khanugaon (2025-26 average): oxygen 6.63 mg/l, BOD 1.87 mg/l, fecal coliform 11.53 MPN/100 ml",
+    "Routine lake monitoring, not at the ghats: Upper Lake, Sehore Naka (2025-26 average): oxygen 7.2 mg/l, BOD 1.93 mg/l, fecal coliform 30.27 MPN/100 ml",
+    "Routine lake monitoring, not at the ghats: Upper Lake, Yacht Club (2025-26 average): oxygen 6.55 mg/l, BOD 1.75 mg/l, fecal coliform 15.93 MPN/100 ml"
+  ],
+  "not_in_data": [
+    "No coliform (bacteria) test at the ghats, so bathing safety from germs is unknown",
+    "No water temperature and no time of sampling",
+    "Units are not printed in the MPPCB reports; standard units are assumed",
+    "One sample per phase per festival; a single reading is not a trend",
+    "No idol counts or crowd figures",
+    "Newest readings are from 2025; nothing yet for 2026",
+    "The data shows readings against limits; it does not show health effects",
+    "Lake reports use BOD (3 days, 27°C), not the 5-day BOD of the CPCB limit; lake BOD is context only (lake report 2025-26 p.9)",
+    "The data cannot separate immersion from sewage as the cause of low oxygen"
+  ],
+  "data_warnings": [
+    "Chromium in Ganesh 2024 runs 7x other festivals: possible unit or method change; treat these metal readings as unverified",
+    "Copper in Ganesh 2024 runs 7x other festivals: possible unit or method change; treat these metal readings as unverified",
+    "Zinc in Ganesh 2024 runs 16x other festivals: possible unit or method change; treat these metal readings as unverified",
+    "Metals in Durga 2025: after-immersion value identical to pre-immersion at 5 of 5 ghats (15 metal series): possible copy in the report; treat as unverified"
+  ]
+}

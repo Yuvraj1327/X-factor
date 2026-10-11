@@ -1,0 +1,2730 @@
+{
+  "visarjan_date": "2026-10-20",
+  "how_ranked": "Ranked on dissolved oxygen only: readings below 5, 4 and 2 mg/l, drops of more than 2 mg/l during immersion, and no recovery a week later. BOD is shown but not scored because it is above the limit at almost every ghat. Metals are not scored because units are not printed and labs disagree. Ghats with fewer readings (temporary kunds, untested festivals) can score lower than their real risk; read the Not tested reasons. A ghat with near-zero oxygen on record that was not tested in the latest Durga is raised to HIGH. Equal points are ties.",
+  "standard": {
+    "class": "B (organised outdoor bathing)",
+    "why": "People enter the water at immersion ghats, so the bathing standard applies.",
+    "oxygen_min": 5.0,
+    "bod_max": 3.0,
+    "fish_oxygen_min": 4.0
+  },
+  "scoring": {
+    "points": {
+      "oxygen_below_2_ever": 3,
+      "oxygen_below_4": 2,
+      "oxygen_below_5": 1,
+      "oxygen_drop": 2,
+      "not_recovered": 1
+    },
+    "tiers": {
+      "HIGH": 20,
+      "MEDIUM": 12,
+      "WATCH": 0
+    }
+  },
+  "latest_durga": 2025,
+  "ghats": [
+    {
+      "site": "Bairagarh (Sant Hirdaram) kund",
+      "water_body": "Upper Lake",
+      "points": 29,
+      "tier": "HIGH",
+      "tier_note": "",
+      "score_parts": {
+        "oxygen_below_2_ever": 1,
+        "oxygen_below_4": 6,
+        "oxygen_below_5": 11,
+        "oxygen_drop": 0,
+        "not_recovered": 3
+      },
+      "tags": [
+        "temporary kund",
+        "near Upper Lake, which has water-supply intake wells (lake report 2023-24 p.1-4)"
+      ],
+      "site_note": "",
+      "reasons": [
+        {
+          "text": "Dissolved oxygen below the bathing limit of 5 mg/l in 11 of 13 readings",
+          "evidence": [
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 0.0,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60",
+              "quality_flag": "zero oxygen: verify with MPPCB"
+            },
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 0.0,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60",
+              "quality_flag": "zero oxygen: verify with MPPCB"
+            },
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 4.2,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 4.5,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 0.0,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26",
+              "quality_flag": "zero oxygen: verify with MPPCB"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 4.2,
+              "status": "measured",
+              "page": 25,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=25"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 2.2,
+              "status": "measured",
+              "page": 25,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=25"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 2.4,
+              "status": "measured",
+              "page": 25,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=25"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 4.1,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 4.2,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 0.0,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28",
+              "quality_flag": "zero oxygen: verify with MPPCB"
+            }
+          ],
+          "pages": [
+            "2023 p.26",
+            "2023 p.60",
+            "2024 p.25",
+            "2024 p.69",
+            "2025 p.28"
+          ]
+        },
+        {
+          "text": "Near-zero oxygen (below 2 mg/l) in 4 readings, lowest 0 mg/l (printed as 0 in the report; verify with MPPCB)",
+          "evidence": [
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 0.0,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60",
+              "quality_flag": "zero oxygen: verify with MPPCB"
+            },
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 0.0,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60",
+              "quality_flag": "zero oxygen: verify with MPPCB"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 0.0,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26",
+              "quality_flag": "zero oxygen: verify with MPPCB"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 0.0,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28",
+              "quality_flag": "zero oxygen: verify with MPPCB"
+            }
+          ],
+          "pages": [
+            "2023 p.26",
+            "2023 p.60",
+            "2025 p.28"
+          ]
+        },
+        {
+          "text": "Not tested in Durga 2025: no table for this site in the report",
+          "evidence": [],
+          "pages": []
+        },
+        {
+          "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 3 of 4 festivals",
+          "evidence": [
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 5.6,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 0.0,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26",
+              "quality_flag": "zero oxygen: verify with MPPCB"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 4.2,
+              "status": "measured",
+              "page": 25,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=25"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 2.4,
+              "status": "measured",
+              "page": 25,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=25"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 5.2,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 4.2,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            }
+          ],
+          "pages": [
+            "2023 p.26",
+            "2024 p.25",
+            "2024 p.69"
+          ]
+        },
+        {
+          "text": "Temporary kund: no before or after sample in Ganesh 2025 because the kund was not built yet or already dismantled (report remark)",
+          "evidence": [],
+          "pages": [
+            "2025 p.28"
+          ]
+        },
+        {
+          "text": "BOD above the bathing limit of 3 mg/l in 13 of 13 readings",
+          "evidence": [
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 9.2,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60"
+            },
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 9.0,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60"
+            },
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 9.4,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 3.8,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 4.2,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 10.0,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 6.0,
+              "status": "measured",
+              "page": 25,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=25"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 8.0,
+              "status": "measured",
+              "page": 25,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=25"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 8.2,
+              "status": "measured",
+              "page": 25,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=25"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 4.2,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 13.2,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 14.0,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 8.0,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28"
+            }
+          ],
+          "pages": [
+            "2023 p.26",
+            "2023 p.60",
+            "2024 p.25",
+            "2024 p.69",
+            "2025 p.28"
+          ]
+        }
+      ],
+      "actions": [
+        "Place aerators before 20 Oct and keep them running for the week after immersion",
+        "Ask MPPCB to sample before (by 18 Oct), during, and one week after (about 27 Oct); for a temporary kund, sample inside the kund while it stands",
+        "Collect idols, flowers and left-over material within 48 hours (CPCB guideline, 2025 report p.23)",
+        "Keep separate bins for flowers and puja material so they stay out of the water",
+        "Line the temporary kund with a removable synthetic liner (CPCB guideline, 2025 report p.14)",
+        "Keep immersion out of the open Upper Lake, which feeds water-supply intakes (NGT order OA 673/2018, 2025 report p.2)",
+        "Ask MPPCB to confirm the flagged readings (see verify) and their units"
+      ],
+      "verify": [
+        {
+          "text": "Dissolved oxygen 0 (Durga 2023, pre): zero oxygen: verify with MPPCB",
+          "year": 2023,
+          "festival": "Durga",
+          "phase": "pre",
+          "parameter": "Dissolved oxygen",
+          "value": 0.0,
+          "status": "measured",
+          "page": 60,
+          "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60",
+          "quality_flag": "zero oxygen: verify with MPPCB"
+        },
+        {
+          "text": "Dissolved oxygen 0 (Durga 2023, during): zero oxygen: verify with MPPCB",
+          "year": 2023,
+          "festival": "Durga",
+          "phase": "during",
+          "parameter": "Dissolved oxygen",
+          "value": 0.0,
+          "status": "measured",
+          "page": 60,
+          "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60",
+          "quality_flag": "zero oxygen: verify with MPPCB"
+        },
+        {
+          "text": "Dissolved oxygen 0 (Ganesh 2023, after): zero oxygen: verify with MPPCB",
+          "year": 2023,
+          "festival": "Ganesh",
+          "phase": "after",
+          "parameter": "Dissolved oxygen",
+          "value": 0.0,
+          "status": "measured",
+          "page": 26,
+          "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26",
+          "quality_flag": "zero oxygen: verify with MPPCB"
+        },
+        {
+          "text": "Lead 1.77 (Ganesh 2024, after): unusually high metal, unit not printed: verify",
+          "year": 2024,
+          "festival": "Ganesh",
+          "phase": "after",
+          "parameter": "Lead",
+          "value": 1.77,
+          "status": "measured",
+          "page": 69,
+          "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69",
+          "quality_flag": "unusually high metal, unit not printed: verify"
+        },
+        {
+          "text": "Dissolved oxygen 0 (Ganesh 2025, during): zero oxygen: verify with MPPCB",
+          "year": 2025,
+          "festival": "Ganesh",
+          "phase": "during",
+          "parameter": "Dissolved oxygen",
+          "value": 0.0,
+          "status": "measured",
+          "page": 28,
+          "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28",
+          "quality_flag": "zero oxygen: verify with MPPCB"
+        }
+      ],
+      "derived": {
+        "oxygen_before_median": 4.7,
+        "oxygen_lowest": 0.0,
+        "oxygen_drop_median": -1.1,
+        "oxygen_recovery_median": -1.4
+      },
+      "coverage": {
+        "rows": 234,
+        "measured": 143,
+        "bdl": 23,
+        "missing": 68,
+        "missing_reasons": {
+          "no table for this site in the report": 36,
+          "kund not built yet at pre-immersion sampling (report remark)": 13,
+          "kund dismantled before post-immersion sampling (report remark)": 13,
+          "parameter not in this festival's tables": 6
+        }
+      },
+      "untested_latest_durga": true,
+      "rank": 1,
+      "tied_with": []
+    },
+    {
+      "site": "Malikhedi kund",
+      "water_body": "not printed",
+      "points": 19,
+      "tier": "HIGH",
+      "tier_note": "Raised to HIGH: near-zero oxygen on record and not tested in Durga 2025; unknown is not safe",
+      "score_parts": {
+        "oxygen_below_2_ever": 1,
+        "oxygen_below_4": 3,
+        "oxygen_below_5": 9,
+        "oxygen_drop": 0,
+        "not_recovered": 1
+      },
+      "tags": [
+        "temporary kund"
+      ],
+      "site_note": "Temporary kund; no water body printed in the reports.",
+      "reasons": [
+        {
+          "text": "Dissolved oxygen below the bathing limit of 5 mg/l in 9 of 13 readings",
+          "evidence": [
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 4.6,
+              "status": "measured",
+              "page": 61,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=61"
+            },
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 4.3,
+              "status": "measured",
+              "page": 61,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=61"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 3.2,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 4.5,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=26"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 4.1,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=26"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 4.0,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=26"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 4.8,
+              "status": "measured",
+              "page": 71,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=71"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 3.8,
+              "status": "measured",
+              "page": 71,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=71"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 0.6,
+              "status": "measured",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29"
+            }
+          ],
+          "pages": [
+            "2023 p.27",
+            "2023 p.61",
+            "2024 p.26",
+            "2024 p.71",
+            "2025 p.29"
+          ]
+        },
+        {
+          "text": "Near-zero oxygen (below 2 mg/l) in 1 reading, lowest 0.6 mg/l",
+          "evidence": [
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 0.6,
+              "status": "measured",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29"
+            }
+          ],
+          "pages": [
+            "2025 p.29"
+          ]
+        },
+        {
+          "text": "Not tested in Durga 2025: no table for this site in the report",
+          "evidence": [],
+          "pages": []
+        },
+        {
+          "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 1 of 4 festivals",
+          "evidence": [
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 7.5,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 3.2,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            }
+          ],
+          "pages": [
+            "2023 p.27"
+          ]
+        },
+        {
+          "text": "Temporary kund: no before or after sample in Ganesh 2025 because the kund was not built yet or already dismantled (report remark)",
+          "evidence": [],
+          "pages": [
+            "2025 p.29"
+          ]
+        },
+        {
+          "text": "BOD above the bathing limit of 3 mg/l in 11 of 13 readings",
+          "evidence": [
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 6.8,
+              "status": "measured",
+              "page": 61,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=61"
+            },
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 6.8,
+              "status": "measured",
+              "page": 61,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=61"
+            },
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 6.6,
+              "status": "measured",
+              "page": 61,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=61"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 16.8,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 6.8,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=26"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 5.0,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=26"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 5.2,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=26"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 6.6,
+              "status": "measured",
+              "page": 71,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=71"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 6.8,
+              "status": "measured",
+              "page": 71,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=71"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 8.4,
+              "status": "measured",
+              "page": 71,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=71"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 5.8,
+              "status": "measured",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29"
+            }
+          ],
+          "pages": [
+            "2023 p.27",
+            "2023 p.61",
+            "2024 p.26",
+            "2024 p.71",
+            "2025 p.29"
+          ]
+        }
+      ],
+      "actions": [
+        "Place aerators before 20 Oct and keep them running for the week after immersion",
+        "Ask MPPCB to sample before (by 18 Oct), during, and one week after (about 27 Oct); for a temporary kund, sample inside the kund while it stands",
+        "Collect idols, flowers and left-over material within 48 hours (CPCB guideline, 2025 report p.23)",
+        "Keep separate bins for flowers and puja material so they stay out of the water",
+        "Line the temporary kund with a removable synthetic liner (CPCB guideline, 2025 report p.14)",
+        "Ask MPPCB to confirm the flagged readings (see verify) and their units"
+      ],
+      "verify": [
+        {
+          "text": "Dissolved oxygen 10.4 (Durga 2023, after): unusually high oxygen: verify",
+          "year": 2023,
+          "festival": "Durga",
+          "phase": "after",
+          "parameter": "Dissolved oxygen",
+          "value": 10.4,
+          "status": "measured",
+          "page": 61,
+          "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=61",
+          "quality_flag": "unusually high oxygen: verify"
+        }
+      ],
+      "derived": {
+        "oxygen_before_median": 4.7,
+        "oxygen_lowest": 0.6,
+        "oxygen_drop_median": -0.45,
+        "oxygen_recovery_median": 0.6
+      },
+      "coverage": {
+        "rows": 234,
+        "measured": 142,
+        "bdl": 24,
+        "missing": 68,
+        "missing_reasons": {
+          "no table for this site in the report": 36,
+          "kund not built yet at pre-immersion sampling (report remark)": 13,
+          "kund dismantled before post-immersion sampling (report remark)": 13,
+          "parameter not in this festival's tables": 6
+        }
+      },
+      "untested_latest_durga": true,
+      "rank": 2,
+      "tied_with": []
+    },
+    {
+      "site": "Rani Kamlapati ghat / Kamla Park kund",
+      "water_body": "Lower Lake",
+      "points": 17,
+      "tier": "MEDIUM",
+      "tier_note": "",
+      "score_parts": {
+        "oxygen_below_2_ever": 0,
+        "oxygen_below_4": 4,
+        "oxygen_below_5": 6,
+        "oxygen_drop": 0,
+        "not_recovered": 3
+      },
+      "tags": [
+        "Lower Lake: BOD above the bathing limit in all 11 months sampled, Apr 2025 to Mar 2026, festival and non-festival months alike (lake report 2025-26 p.9)"
+      ],
+      "site_note": "Ganesh tables say Kamla Park kund, Durga tables say Rani Kamlapati ghat (Lower Lake). May be two sampling points.",
+      "reasons": [
+        {
+          "text": "Dissolved oxygen below the bathing limit of 5 mg/l in 6 of 18 readings",
+          "evidence": [
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 4.8,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 4.3,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 3.6,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 2.5,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 2.4,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 2.6,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            }
+          ],
+          "pages": [
+            "2024 p.70",
+            "2025 p.64"
+          ]
+        },
+        {
+          "text": "In Durga 2025, oxygen was 2.4 mg/l in the during-immersion sample (already below the limit before immersion)",
+          "evidence": [
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 2.4,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            }
+          ],
+          "pages": [
+            "2025 p.64"
+          ]
+        },
+        {
+          "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 3 of 6 festivals",
+          "evidence": [
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 7.5,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 6.5,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 4.8,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 3.6,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 6.9,
+              "status": "measured",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 6.2,
+              "status": "measured",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29"
+            }
+          ],
+          "pages": [
+            "2024 p.24",
+            "2024 p.70",
+            "2025 p.29"
+          ]
+        },
+        {
+          "text": "BOD above the bathing limit of 3 mg/l in 18 of 18 readings",
+          "evidence": [
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 8.8,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59"
+            },
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 8.4,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59"
+            },
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 8.6,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 4.2,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 4.4,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 9.2,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 5.6,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 5.8,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 6.0,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 4.8,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 5.0,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 6.4,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 6.8,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 8.8,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 4.8,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 3.8,
+              "status": "measured",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 6.9,
+              "status": "measured",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 4.8,
+              "status": "measured",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29"
+            }
+          ],
+          "pages": [
+            "2023 p.27",
+            "2023 p.59",
+            "2024 p.24",
+            "2024 p.70",
+            "2025 p.29",
+            "2025 p.64"
+          ]
+        }
+      ],
+      "actions": [
+        "Place aerators before 20 Oct and keep them running for the week after immersion",
+        "Collect idols, flowers and left-over material within 48 hours (CPCB guideline, 2025 report p.23)",
+        "Keep separate bins for flowers and puja material so they stay out of the water"
+      ],
+      "verify": [],
+      "derived": {
+        "oxygen_before_median": 6.4,
+        "oxygen_lowest": 2.4,
+        "oxygen_drop_median": -0.35,
+        "oxygen_recovery_median": -0.3
+      },
+      "coverage": {
+        "rows": 234,
+        "measured": 203,
+        "bdl": 25,
+        "missing": 6,
+        "missing_reasons": {
+          "parameter not in this festival's tables": 6
+        }
+      },
+      "untested_latest_durga": false,
+      "rank": 3,
+      "tied_with": []
+    },
+    {
+      "site": "Shahpura lake ghat",
+      "water_body": "Shahpura Lake",
+      "points": 14,
+      "tier": "MEDIUM",
+      "tier_note": "",
+      "score_parts": {
+        "oxygen_below_2_ever": 0,
+        "oxygen_below_4": 3,
+        "oxygen_below_5": 5,
+        "oxygen_drop": 0,
+        "not_recovered": 3
+      },
+      "tags": [],
+      "site_note": "",
+      "reasons": [
+        {
+          "text": "Dissolved oxygen below the bathing limit of 5 mg/l in 5 of 18 readings",
+          "evidence": [
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 4.5,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60"
+            },
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 4.0,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 3.8,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=26"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 2.5,
+              "status": "measured",
+              "page": 65,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=65"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 2.8,
+              "status": "measured",
+              "page": 65,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=65"
+            }
+          ],
+          "pages": [
+            "2023 p.60",
+            "2024 p.26",
+            "2025 p.65"
+          ]
+        },
+        {
+          "text": "In Durga 2025, oxygen was 2.5 mg/l in the pre-immersion sample (already below the limit before immersion)",
+          "evidence": [
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 2.5,
+              "status": "measured",
+              "page": 65,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=65"
+            }
+          ],
+          "pages": [
+            "2025 p.65"
+          ]
+        },
+        {
+          "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 3 of 6 festivals",
+          "evidence": [
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 5.9,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=28"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 5.0,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=28"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 6.8,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=26"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 3.8,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=26"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 7.4,
+              "status": "measured",
+              "page": 72,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=72"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 6.3,
+              "status": "measured",
+              "page": 72,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=72"
+            }
+          ],
+          "pages": [
+            "2023 p.28",
+            "2024 p.26",
+            "2024 p.72"
+          ]
+        },
+        {
+          "text": "BOD above the bathing limit of 3 mg/l in 18 of 18 readings",
+          "evidence": [
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 6.4,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60"
+            },
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 6.8,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60"
+            },
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 7.8,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 6.4,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=28"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 8.4,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=28"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 10.4,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=28"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 10.8,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=26"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 11.2,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=26"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 11.6,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=26"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 5.8,
+              "status": "measured",
+              "page": 72,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=72"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 10.0,
+              "status": "measured",
+              "page": 72,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=72"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 6.8,
+              "status": "measured",
+              "page": 72,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=72"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 6.8,
+              "status": "measured",
+              "page": 65,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=65"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 11.4,
+              "status": "measured",
+              "page": 65,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=65"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 10.4,
+              "status": "measured",
+              "page": 65,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=65"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 4.2,
+              "status": "measured",
+              "page": 30,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=30"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 5.0,
+              "status": "measured",
+              "page": 30,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=30"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 4.8,
+              "status": "measured",
+              "page": 30,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=30"
+            }
+          ],
+          "pages": [
+            "2023 p.28",
+            "2023 p.60",
+            "2024 p.26",
+            "2024 p.72",
+            "2025 p.30",
+            "2025 p.65"
+          ]
+        }
+      ],
+      "actions": [
+        "Place aerators before 20 Oct and keep them running for the week after immersion",
+        "Collect idols, flowers and left-over material within 48 hours (CPCB guideline, 2025 report p.23)",
+        "Keep separate bins for flowers and puja material so they stay out of the water"
+      ],
+      "verify": [],
+      "derived": {
+        "oxygen_before_median": 6.35,
+        "oxygen_lowest": 2.5,
+        "oxygen_drop_median": -0.65,
+        "oxygen_recovery_median": -0.7
+      },
+      "coverage": {
+        "rows": 234,
+        "measured": 202,
+        "bdl": 26,
+        "missing": 6,
+        "missing_reasons": {
+          "parameter not in this festival's tables": 6
+        }
+      },
+      "untested_latest_durga": false,
+      "rank": 4,
+      "tied_with": []
+    },
+    {
+      "site": "Khatlapura ghat",
+      "water_body": "Lower Lake",
+      "points": 12,
+      "tier": "MEDIUM",
+      "tier_note": "",
+      "score_parts": {
+        "oxygen_below_2_ever": 0,
+        "oxygen_below_4": 0,
+        "oxygen_below_5": 8,
+        "oxygen_drop": 1,
+        "not_recovered": 2
+      },
+      "tags": [
+        "Lower Lake: BOD above the bathing limit in all 11 months sampled, Apr 2025 to Mar 2026, festival and non-festival months alike (lake report 2025-26 p.9)"
+      ],
+      "site_note": "",
+      "reasons": [
+        {
+          "text": "Dissolved oxygen below the bathing limit of 5 mg/l in 8 of 18 readings",
+          "evidence": [
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 4.5,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59"
+            },
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 4.2,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59"
+            },
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 4.4,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 4.5,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 4.4,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 4.3,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 4.0,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 4.6,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            }
+          ],
+          "pages": [
+            "2023 p.59",
+            "2024 p.24",
+            "2024 p.69"
+          ]
+        },
+        {
+          "text": "Oxygen dropped by more than 2 mg/l during immersion in Durga 2024",
+          "evidence": [
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 6.6,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 4.5,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            }
+          ],
+          "pages": [
+            "2024 p.24"
+          ]
+        },
+        {
+          "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 2 of 6 festivals",
+          "evidence": [
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 6.6,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 4.4,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 7.3,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 6.5,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28"
+            }
+          ],
+          "pages": [
+            "2024 p.24",
+            "2025 p.28"
+          ]
+        },
+        {
+          "text": "BOD above the bathing limit of 3 mg/l in 15 of 17 readings",
+          "evidence": [
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 6.4,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59"
+            },
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 7.8,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 11.2,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 7.8,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 8.0,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 8.4,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 6.8,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 7.2,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 6.2,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 4.4,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 4.6,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 3.1,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 4.4,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 5.4,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 5.2,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28"
+            }
+          ],
+          "pages": [
+            "2023 p.26",
+            "2023 p.59",
+            "2024 p.24",
+            "2024 p.69",
+            "2025 p.28",
+            "2025 p.64"
+          ]
+        }
+      ],
+      "actions": [
+        "Place aerators before 20 Oct and keep them running for the week after immersion",
+        "Collect idols, flowers and left-over material within 48 hours (CPCB guideline, 2025 report p.23)",
+        "Keep separate bins for flowers and puja material so they stay out of the water",
+        "Ask MPPCB to confirm the flagged readings (see verify) and their units"
+      ],
+      "verify": [
+        {
+          "text": "Chromium 1.98 (Ganesh 2024, during): unusually high metal, unit not printed: verify",
+          "year": 2024,
+          "festival": "Ganesh",
+          "phase": "during",
+          "parameter": "Chromium",
+          "value": 1.98,
+          "status": "measured",
+          "page": 69,
+          "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69",
+          "quality_flag": "unusually high metal, unit not printed: verify"
+        },
+        {
+          "text": "Lead 1.266 (Ganesh 2024, after): unusually high metal, unit not printed: verify",
+          "year": 2024,
+          "festival": "Ganesh",
+          "phase": "after",
+          "parameter": "Lead",
+          "value": 1.266,
+          "status": "measured",
+          "page": 69,
+          "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69",
+          "quality_flag": "unusually high metal, unit not printed: verify"
+        }
+      ],
+      "derived": {
+        "oxygen_before_median": 6.5,
+        "oxygen_lowest": 4.0,
+        "oxygen_drop_median": -0.6,
+        "oxygen_recovery_median": -0.3
+      },
+      "coverage": {
+        "rows": 234,
+        "measured": 196,
+        "bdl": 27,
+        "missing": 11,
+        "missing_reasons": {
+          "parameter not in this festival's tables": 6,
+          "blank (_ or -) in report: not sampled or not reported": 5
+        }
+      },
+      "untested_latest_durga": false,
+      "rank": 5,
+      "tied_with": []
+    },
+    {
+      "site": "Hathaikheda dam / kund",
+      "water_body": "Hathaikheda dam",
+      "points": 6,
+      "tier": "WATCH",
+      "tier_note": "",
+      "score_parts": {
+        "oxygen_below_2_ever": 0,
+        "oxygen_below_4": 0,
+        "oxygen_below_5": 0,
+        "oxygen_drop": 2,
+        "not_recovered": 2
+      },
+      "tags": [],
+      "site_note": "Ganesh tables say visarjan kund, Durga tables say dam ghat. May be two sampling points.",
+      "reasons": [
+        {
+          "text": "Dissolved oxygen below the bathing limit of 5 mg/l in 0 of 18 readings",
+          "evidence": [],
+          "pages": []
+        },
+        {
+          "text": "Oxygen dropped by more than 2 mg/l during immersion in Durga 2024, Ganesh 2024",
+          "evidence": [
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 8.6,
+              "status": "measured",
+              "page": 23,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=23"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 5.9,
+              "status": "measured",
+              "page": 23,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=23"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 9.0,
+              "status": "measured",
+              "page": 71,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=71"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 5.3,
+              "status": "measured",
+              "page": 71,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=71"
+            }
+          ],
+          "pages": [
+            "2024 p.23",
+            "2024 p.71"
+          ]
+        },
+        {
+          "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 2 of 6 festivals",
+          "evidence": [
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 7.9,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 5.1,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 8.6,
+              "status": "measured",
+              "page": 23,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=23"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "Dissolved oxygen",
+              "value": 5.7,
+              "status": "measured",
+              "page": 23,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=23"
+            }
+          ],
+          "pages": [
+            "2023 p.27",
+            "2024 p.23"
+          ]
+        },
+        {
+          "text": "BOD above the bathing limit of 3 mg/l in 16 of 18 readings",
+          "evidence": [
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 4.0,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59"
+            },
+            {
+              "year": 2023,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 8.8,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 6.0,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            },
+            {
+              "year": 2023,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 10.8,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 7.4,
+              "status": "measured",
+              "page": 23,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=23"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 4.4,
+              "status": "measured",
+              "page": 23,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=23"
+            },
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 4.6,
+              "status": "measured",
+              "page": 23,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=23"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 7.2,
+              "status": "measured",
+              "page": 71,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=71"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 13.2,
+              "status": "measured",
+              "page": 71,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=71"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 22.0,
+              "status": "measured",
+              "page": 71,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=71"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 6.8,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 8.0,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 6.4,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 5.2,
+              "status": "measured",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 10.0,
+              "status": "measured",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 5.2,
+              "status": "measured",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29"
+            }
+          ],
+          "pages": [
+            "2023 p.27",
+            "2023 p.59",
+            "2024 p.23",
+            "2024 p.71",
+            "2025 p.29",
+            "2025 p.64"
+          ]
+        }
+      ],
+      "actions": [
+        "Collect idols, flowers and left-over material within 48 hours (CPCB guideline, 2025 report p.23)",
+        "Keep separate bins for flowers and puja material so they stay out of the water",
+        "Ask MPPCB to confirm the flagged readings (see verify) and their units"
+      ],
+      "verify": [
+        {
+          "text": "Dissolved oxygen 10.2 (Durga 2023, during): unusually high oxygen: verify",
+          "year": 2023,
+          "festival": "Durga",
+          "phase": "during",
+          "parameter": "Dissolved oxygen",
+          "value": 10.2,
+          "status": "measured",
+          "page": 59,
+          "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59",
+          "quality_flag": "unusually high oxygen: verify"
+        },
+        {
+          "text": "Lead 0.537 (Ganesh 2024, during): unusually high metal, unit not printed: verify",
+          "year": 2024,
+          "festival": "Ganesh",
+          "phase": "during",
+          "parameter": "Lead",
+          "value": 0.537,
+          "status": "measured",
+          "page": 71,
+          "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=71",
+          "quality_flag": "unusually high metal, unit not printed: verify"
+        },
+        {
+          "text": "Dissolved oxygen 11 (Ganesh 2024, after): unusually high oxygen: verify",
+          "year": 2024,
+          "festival": "Ganesh",
+          "phase": "after",
+          "parameter": "Dissolved oxygen",
+          "value": 11.0,
+          "status": "measured",
+          "page": 71,
+          "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=71",
+          "quality_flag": "unusually high oxygen: verify"
+        },
+        {
+          "text": "Dissolved oxygen 10.8 (Durga 2025, after): unusually high oxygen: verify",
+          "year": 2025,
+          "festival": "Durga",
+          "phase": "after",
+          "parameter": "Dissolved oxygen",
+          "value": 10.8,
+          "status": "measured",
+          "page": 64,
+          "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64",
+          "quality_flag": "unusually high oxygen: verify"
+        }
+      ],
+      "derived": {
+        "oxygen_before_median": 8.2,
+        "oxygen_lowest": 5.1,
+        "oxygen_drop_median": -0.7,
+        "oxygen_recovery_median": 1.4
+      },
+      "coverage": {
+        "rows": 234,
+        "measured": 203,
+        "bdl": 25,
+        "missing": 6,
+        "missing_reasons": {
+          "parameter not in this festival's tables": 6
+        }
+      },
+      "untested_latest_durga": false,
+      "rank": 6,
+      "tied_with": []
+    },
+    {
+      "site": "Prempura ghat",
+      "water_body": "Upper Lake",
+      "points": 5,
+      "tier": "WATCH",
+      "tier_note": "",
+      "score_parts": {
+        "oxygen_below_2_ever": 0,
+        "oxygen_below_4": 1,
+        "oxygen_below_5": 3,
+        "oxygen_drop": 0,
+        "not_recovered": 0
+      },
+      "tags": [
+        "near Upper Lake, which has water-supply intake wells (lake report 2023-24 p.1-4); Upper Lake inferred, not printed"
+      ],
+      "site_note": "No water body printed; Upper Lake is inferred.",
+      "reasons": [
+        {
+          "text": "Dissolved oxygen below the bathing limit of 5 mg/l in 3 of 18 readings",
+          "evidence": [
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "Dissolved oxygen",
+              "value": 4.3,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 3.9,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 4.9,
+              "status": "measured",
+              "page": 65,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=65"
+            }
+          ],
+          "pages": [
+            "2024 p.70",
+            "2025 p.65"
+          ]
+        },
+        {
+          "text": "In Durga 2025, oxygen was 4.9 mg/l in the during-immersion sample",
+          "evidence": [
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "Dissolved oxygen",
+              "value": 4.9,
+              "status": "measured",
+              "page": 65,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=65"
+            }
+          ],
+          "pages": [
+            "2025 p.65"
+          ]
+        },
+        {
+          "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 0 of 6 festivals",
+          "evidence": [],
+          "pages": []
+        },
+        {
+          "text": "BOD above the bathing limit of 3 mg/l in 9 of 15 readings",
+          "evidence": [
+            {
+              "year": 2024,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 3.4,
+              "status": "measured",
+              "page": 25,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=25"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 3.2,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 6.8,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            },
+            {
+              "year": 2024,
+              "festival": "Ganesh",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 5.2,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 4.4,
+              "status": "measured",
+              "page": 65,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=65"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 4.8,
+              "status": "measured",
+              "page": 65,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=65"
+            },
+            {
+              "year": 2025,
+              "festival": "Durga",
+              "phase": "after",
+              "parameter": "BOD",
+              "value": 3.2,
+              "status": "measured",
+              "page": 65,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=65"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "pre",
+              "parameter": "BOD",
+              "value": 4.8,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28"
+            },
+            {
+              "year": 2025,
+              "festival": "Ganesh",
+              "phase": "during",
+              "parameter": "BOD",
+              "value": 4.8,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28"
+            }
+          ],
+          "pages": [
+            "2024 p.25",
+            "2024 p.70",
+            "2025 p.28",
+            "2025 p.65"
+          ]
+        }
+      ],
+      "actions": [
+        "Place aerators before 20 Oct and keep them running for the week after immersion",
+        "Keep separate bins for flowers and puja material so they stay out of the water",
+        "Keep immersion out of the open Upper Lake, which feeds water-supply intakes (NGT order OA 673/2018, 2025 report p.2)"
+      ],
+      "verify": [],
+      "derived": {
+        "oxygen_before_median": 6.35,
+        "oxygen_lowest": 3.9,
+        "oxygen_drop_median": -0.65,
+        "oxygen_recovery_median": 0.3
+      },
+      "coverage": {
+        "rows": 234,
+        "measured": 200,
+        "bdl": 24,
+        "missing": 10,
+        "missing_reasons": {
+          "parameter not in this festival's tables": 6,
+          "blank (_ or -) in report: not sampled or not reported": 4
+        }
+      },
+      "untested_latest_durga": false,
+      "rank": 7,
+      "tied_with": []
+    }
+  ],
+  "context": {
+    "kund_vs_river": {
+      "text": "Across Madhya Pradesh, oxygen was below 4 mg/l in 11.5% of kund readings vs 2.7% of river readings. In kunds, 3.5% of pre-immersion samples were below 4 mg/l vs 16.8% of samples one week after.",
+      "source": "MPPCB reports 2023-2025, statewide tables (site type from site names)",
+      "kund_or_pond": {
+        "readings": 641,
+        "below_4_pct": 11.5,
+        "pre_below_4_pct": 3.5,
+        "during_below_4_pct": 14.2,
+        "after_below_4_pct": 16.8
+      },
+      "river": {
+        "readings": 510,
+        "below_4_pct": 2.7,
+        "pre_below_4_pct": 0.0,
+        "during_below_4_pct": 5.1,
+        "after_below_4_pct": 3.0
+      }
+    },
+    "lake_baseline": [
+      {
+        "station": "Bairagarh intake",
+        "lake": "Upper Lake",
+        "text": "Routine lake monitoring, not at the ghats: Upper Lake, Bairagarh intake (2025-26 average): oxygen 6.86 mg/l, BOD 1.94 mg/l, fecal coliform 22.38 MPN/100 ml",
+        "pdf": "/reports/lake_2025-26_Upper_Lower_monthly.pdf#page=7"
+      },
+      {
+        "station": "Kalighat spill outlet",
+        "lake": "Lower Lake",
+        "text": "Routine lake monitoring, not at the ghats: Lower Lake, Kalighat spill outlet (2025-26 average): oxygen 5.2 mg/l, BOD 5.54 mg/l, fecal coliform at least 977.27 MPN/100 ml",
+        "pdf": "/reports/lake_2025-26_Upper_Lower_monthly.pdf#page=9"
+      },
+      {
+        "station": "Kamla Park intake",
+        "lake": "Upper Lake",
+        "text": "Routine lake monitoring, not at the ghats: Upper Lake, Kamla Park intake (2025-26 average): oxygen 6.63 mg/l, BOD 1.68 mg/l, fecal coliform 13.29 MPN/100 ml",
+        "pdf": "/reports/lake_2025-26_Upper_Lower_monthly.pdf#page=1"
+      },
+      {
+        "station": "Karbala intake",
+        "lake": "Upper Lake",
+        "text": "Routine lake monitoring, not at the ghats: Upper Lake, Karbala intake (2025-26 average): oxygen 6.72 mg/l, BOD 1.79 mg/l, fecal coliform 15.47 MPN/100 ml",
+        "pdf": "/reports/lake_2025-26_Upper_Lower_monthly.pdf#page=5"
+      },
+      {
+        "station": "Khanugaon",
+        "lake": "Upper Lake",
+        "text": "Routine lake monitoring, not at the ghats: Upper Lake, Khanugaon (2025-26 average): oxygen 6.63 mg/l, BOD 1.87 mg/l, fecal coliform 11.53 MPN/100 ml",
+        "pdf": "/reports/lake_2025-26_Upper_Lower_monthly.pdf#page=11"
+      },
+      {
+        "station": "Sehore Naka",
+        "lake": "Upper Lake",
+        "text": "Routine lake monitoring, not at the ghats: Upper Lake, Sehore Naka (2025-26 average): oxygen 7.2 mg/l, BOD 1.93 mg/l, fecal coliform 30.27 MPN/100 ml",
+        "pdf": "/reports/lake_2025-26_Upper_Lower_monthly.pdf#page=12"
+      },
+      {
+        "station": "Yacht Club",
+        "lake": "Upper Lake",
+        "text": "Routine lake monitoring, not at the ghats: Upper Lake, Yacht Club (2025-26 average): oxygen 6.55 mg/l, BOD 1.75 mg/l, fecal coliform 15.93 MPN/100 ml",
+        "pdf": "/reports/lake_2025-26_Upper_Lower_monthly.pdf#page=3"
+      }
+    ]
+  },
+  "not_in_data": [
+    "No coliform (bacteria) test at the ghats, so bathing safety from germs is unknown",
+    "No water temperature and no time of sampling",
+    "Units are not printed in the MPPCB reports; standard units are assumed",
+    "One sample per phase per festival; a single reading is not a trend",
+    "No idol counts or crowd figures",
+    "Newest readings are from 2025; nothing yet for 2026",
+    "The data shows readings against limits; it does not show health effects",
+    "Lake reports use BOD (3 days, 27°C), not the 5-day BOD of the CPCB limit; lake BOD is context only (lake report 2025-26 p.9)",
+    "The data cannot separate immersion from sewage as the cause of low oxygen"
+  ],
+  "data_warnings": [
+    "Chromium in Ganesh 2024 runs 7x other festivals: possible unit or method change; treat these metal readings as unverified",
+    "Copper in Ganesh 2024 runs 7x other festivals: possible unit or method change; treat these metal readings as unverified",
+    "Zinc in Ganesh 2024 runs 16x other festivals: possible unit or method change; treat these metal readings as unverified",
+    "Metals in Durga 2025: after-immersion value identical to pre-immersion at 5 of 5 ghats (15 metal series): possible copy in the report; treat as unverified"
+  ],
+  "sources": [
+    "reports/2023_MPPCB_Idol_Immersion_Report.pdf",
+    "reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf",
+    "reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf"
+  ]
+}
