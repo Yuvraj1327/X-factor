@@ -1,8 +1,9 @@
 {
   "visarjan_date": "2026-10-20",
-  "how_ranked": "Ranked on dissolved oxygen only: readings below 5, 4 and 2 mg/l, drops of more than 2 mg/l during immersion, and no recovery a week later. BOD is shown but not scored because it is above the limit at almost every ghat. Metals are not scored because units are not printed and labs disagree. Ghats with fewer readings (temporary kunds, untested festivals) can score lower than their real risk; read the Not tested reasons. A ghat with near-zero oxygen on record that was not tested in the latest Durga is raised to HIGH. Equal points are ties.",
+  "how_ranked": "Ranked on dissolved oxygen only: readings below 5, 4 and 2 mg/l, drops of more than 2 mg/l during immersion, and no recovery a week later. BOD is shown but not scored because it is above the limit at almost every ghat. Metals are not scored because units are not printed and labs disagree. Ghats with fewer readings (temporary kunds, untested festivals) can score lower than their real risk; read the Not tested reasons. A ghat with near-zero oxygen on record that was not tested in the latest Durga is raised to HIGH. Equal points in the same tier are a tie; of tied ghats, the one near the Upper Lake water-supply intakes is listed first.",
   "standard": {
     "class": "B (organised outdoor bathing)",
+    "why": "People enter the water at immersion ghats, so the bathing standard applies.",
     "oxygen_min": 5.0,
     "bod_max": 3.0,
     "fish_oxygen_min": 4.0
@@ -57,7 +58,7 @@
           ]
         },
         {
-          "text": "BOD above the bathing limit of 3 mg/l in 13 of 13 readings",
+          "text": "BOD above the bathing limit of 3 mg/l (report does not print the BOD test method) in 13 of 13 readings",
           "pages": [
             "2023 p.26",
             "2023 p.60",
@@ -73,7 +74,7 @@
         "Collect idols, flowers and left-over material within 48 hours (CPCB guideline, 2025 report p.23)",
         "Keep separate bins for flowers and puja material so they stay out of the water",
         "Line the temporary kund with a removable synthetic liner (CPCB guideline, 2025 report p.14)",
-        "Keep immersion out of the open Upper Lake, which feeds water-supply intakes (NGT order OA 673/2018, 2025 report p.2)",
+        "Keep immersion out of the open Upper Lake, which has water-supply intake wells (lake report 2023-24 p.1-4); CPCB guidelines under NGT order OA 673/2018 call for temporary confined ponds (2025 report p.2 and p.14)",
         "Ask MPPCB to confirm the flagged readings (see verify) and their units"
       ],
       "verify": [
@@ -91,7 +92,7 @@
       "tier": "HIGH",
       "points": 19,
       "tied_with": [],
-      "tier_note": "Raised to HIGH: near-zero oxygen on record and not tested in Durga 2025; unknown is not safe",
+      "tier_note": "Raised to HIGH: near-zero oxygen on record and not tested in Durga 2025; missing data is not treated as clean",
       "tags": [
         "temporary kund"
       ],
@@ -129,7 +130,7 @@
           ]
         },
         {
-          "text": "BOD above the bathing limit of 3 mg/l in 11 of 13 readings",
+          "text": "BOD above the bathing limit of 3 mg/l (report does not print the BOD test method) in 11 of 13 readings",
           "pages": [
             "2023 p.27",
             "2023 p.61",
@@ -160,7 +161,7 @@
       "tied_with": [],
       "tier_note": "",
       "tags": [
-        "Lower Lake: BOD above the bathing limit in all 11 months sampled, Apr 2025 to Mar 2026, festival and non-festival months alike (lake report 2025-26 p.9)"
+        "Lower Lake: BOD (3-day test) above 3 mg/l in all 11 months sampled, Apr 2025 to Mar 2026, festival and non-festival months alike (lake report 2025-26 p.9)"
       ],
       "reasons": [
         {
@@ -171,7 +172,7 @@
           ]
         },
         {
-          "text": "In Durga 2025, oxygen was 2.4 mg/l in the during-immersion sample (already below the limit before immersion)",
+          "text": "In Durga 2025, oxygen was 2.4 mg/l in the during-immersion sample, and already 2.5 mg/l before immersion",
           "pages": [
             "2025 p.64"
           ]
@@ -185,7 +186,7 @@
           ]
         },
         {
-          "text": "BOD above the bathing limit of 3 mg/l in 18 of 18 readings",
+          "text": "BOD above the bathing limit of 3 mg/l (report does not print the BOD test method) in 18 of 18 readings",
           "pages": [
             "2023 p.27",
             "2023 p.59",
@@ -222,7 +223,7 @@
           ]
         },
         {
-          "text": "In Durga 2025, oxygen was 2.5 mg/l in the pre-immersion sample (already below the limit before immersion)",
+          "text": "In Durga 2025, oxygen was already 2.5 mg/l before immersion (pre-immersion sample)",
           "pages": [
             "2025 p.65"
           ]
@@ -236,7 +237,7 @@
           ]
         },
         {
-          "text": "BOD above the bathing limit of 3 mg/l in 18 of 18 readings",
+          "text": "BOD above the bathing limit of 3 mg/l (report does not print the BOD test method) in 18 of 18 readings",
           "pages": [
             "2023 p.28",
             "2023 p.60",
@@ -263,7 +264,7 @@
       "tied_with": [],
       "tier_note": "",
       "tags": [
-        "Lower Lake: BOD above the bathing limit in all 11 months sampled, Apr 2025 to Mar 2026, festival and non-festival months alike (lake report 2025-26 p.9)"
+        "Lower Lake: BOD (3-day test) above 3 mg/l in all 11 months sampled, Apr 2025 to Mar 2026, festival and non-festival months alike (lake report 2025-26 p.9)"
       ],
       "reasons": [
         {
@@ -288,7 +289,7 @@
           ]
         },
         {
-          "text": "BOD above the bathing limit of 3 mg/l in 15 of 17 readings",
+          "text": "BOD above the bathing limit of 3 mg/l (report does not print the BOD test method) in 15 of 17 readings",
           "pages": [
             "2023 p.26",
             "2023 p.59",
@@ -322,7 +323,14 @@
       "reasons": [
         {
           "text": "Dissolved oxygen below the bathing limit of 5 mg/l in 0 of 18 readings",
-          "pages": []
+          "pages": [
+            "2023 p.27",
+            "2023 p.59",
+            "2024 p.23",
+            "2024 p.71",
+            "2025 p.29",
+            "2025 p.64"
+          ]
         },
         {
           "text": "Oxygen dropped by more than 2 mg/l during immersion in Durga 2024, Ganesh 2024",
@@ -339,7 +347,7 @@
           ]
         },
         {
-          "text": "BOD above the bathing limit of 3 mg/l in 16 of 18 readings",
+          "text": "BOD above the bathing limit of 3 mg/l (report does not print the BOD test method) in 16 of 18 readings",
           "pages": [
             "2023 p.27",
             "2023 p.59",
@@ -389,10 +397,17 @@
         },
         {
           "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 0 of 6 festivals",
-          "pages": []
+          "pages": [
+            "2023 p.26",
+            "2023 p.60",
+            "2024 p.25",
+            "2024 p.70",
+            "2025 p.28",
+            "2025 p.65"
+          ]
         },
         {
-          "text": "BOD above the bathing limit of 3 mg/l in 9 of 15 readings",
+          "text": "BOD above the bathing limit of 3 mg/l (report does not print the BOD test method) in 9 of 15 readings",
           "pages": [
             "2024 p.25",
             "2024 p.70",
@@ -404,14 +419,14 @@
       "actions": [
         "Place aerators before 20 Oct and keep them running for the week after immersion",
         "Keep separate bins for flowers and puja material so they stay out of the water",
-        "Keep immersion out of the open Upper Lake, which feeds water-supply intakes (NGT order OA 673/2018, 2025 report p.2)"
+        "Keep immersion out of the open Upper Lake, which has water-supply intake wells (lake report 2023-24 p.1-4); CPCB guidelines under NGT order OA 673/2018 call for temporary confined ponds (2025 report p.2 and p.14)"
       ],
       "verify": [],
       "site_note": "No water body printed; Upper Lake is inferred."
     }
   ],
   "context": [
-    "Across Madhya Pradesh, oxygen was below 4 mg/l in 11.5% of kund readings vs 2.7% of river readings. In kunds, 3.5% of pre-immersion samples were below 4 mg/l vs 16.8% of samples one week after.",
+    "Across Madhya Pradesh, oxygen was below 4 mg/l in 11.5% of kund readings vs 2.7% of river readings. In kunds, 3.5% of pre-immersion samples were below 4 mg/l vs 16.8% of samples one week after (site type read from site names; implausible readings left out).",
     "Routine lake monitoring, not at the ghats: Upper Lake, Bairagarh intake (2025-26 average): oxygen 6.86 mg/l, BOD 1.94 mg/l, fecal coliform 22.38 MPN/100 ml",
     "Routine lake monitoring, not at the ghats: Lower Lake, Kalighat spill outlet (2025-26 average): oxygen 5.2 mg/l, BOD 5.54 mg/l, fecal coliform at least 977.27 MPN/100 ml",
     "Routine lake monitoring, not at the ghats: Upper Lake, Kamla Park intake (2025-26 average): oxygen 6.63 mg/l, BOD 1.68 mg/l, fecal coliform 13.29 MPN/100 ml",
@@ -423,12 +438,12 @@
   "not_in_data": [
     "No coliform (bacteria) test at the ghats, so bathing safety from germs is unknown",
     "No water temperature and no time of sampling",
-    "Units are not printed in the MPPCB reports; standard units are assumed",
+    "Units are not printed in the MPPCB immersion reports; standard units are assumed",
     "One sample per phase per festival; a single reading is not a trend",
     "No idol counts or crowd figures",
     "Newest readings are from 2025; nothing yet for 2026",
     "The data shows readings against limits; it does not show health effects",
-    "Lake reports use BOD (3 days, 27°C), not the 5-day BOD of the CPCB limit; lake BOD is context only (lake report 2025-26 p.9)",
+    "The immersion reports print BOD without the test method; the lake reports use BOD (3 days, 27°C), not the 5-day 20°C BOD of the CPCB limit (lake report 2025-26 p.9). BOD is shown against the limit but not scored",
     "The data cannot separate immersion from sewage as the cause of low oxygen"
   ],
   "data_warnings": [

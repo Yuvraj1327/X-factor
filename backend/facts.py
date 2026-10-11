@@ -25,13 +25,13 @@ TIERS = [(20, "HIGH"), (12, "MEDIUM"), (0, "WATCH")]
 NOT_IN_DATA = [
     "No coliform (bacteria) test at the ghats, so bathing safety from germs is unknown",
     "No water temperature and no time of sampling",
-    "Units are not printed in the MPPCB reports; standard units are assumed",
+    "Units are not printed in the MPPCB immersion reports; standard units are assumed",
     "One sample per phase per festival; a single reading is not a trend",
     "No idol counts or crowd figures",
     "Newest readings are from 2025; nothing yet for 2026",
     "The data shows readings against limits; it does not show health effects",
-    "Lake reports use BOD (3 days, 27°C), not the 5-day BOD of the CPCB limit; lake BOD is context only "
-    "(lake report 2025-26 p.9)",
+    "The immersion reports print BOD without the test method; the lake reports use BOD (3 days, 27°C), not the "
+    "5-day 20°C BOD of the CPCB limit (lake report 2025-26 p.9). BOD is shown against the limit but not scored",
     "The data cannot separate immersion from sewage as the cause of low oxygen",
 ]
 HOW_RANKED = ("Ranked on dissolved oxygen only: readings below 5, 4 and 2 mg/l, drops of more than 2 mg/l during "
@@ -39,7 +39,8 @@ HOW_RANKED = ("Ranked on dissolved oxygen only: readings below 5, 4 and 2 mg/l, 
               "at almost every ghat. Metals are not scored because units are not printed and labs disagree. "
               "Ghats with fewer readings (temporary kunds, untested festivals) can score lower than their real risk; "
               "read the Not tested reasons. A ghat with near-zero oxygen on record that was not tested in the latest "
-              "Durga is raised to HIGH. Equal points are ties.")
+              "Durga is raised to HIGH. Equal points in the same tier are a tie; of tied ghats, the one near the "
+              "Upper Lake water-supply intakes is listed first.")
 
 
 def limits():
@@ -97,7 +98,7 @@ def lower_lake_tag():
     above = int((bod.value > limits()["bod_max"]).sum())
     span = f"{pd.Timestamp(bod.period.min()):%b %Y} to {pd.Timestamp(bod.period.max()):%b %Y}"
     count = f"all {len(bod)}" if above == len(bod) else f"{above} of {len(bod)}"
-    return (f"Lower Lake: BOD above the bathing limit in {count} months sampled, {span}, festival and "
+    return (f"Lower Lake: BOD (3-day test) above 3 mg/l in {count} months sampled, {span}, festival and "
             f"non-festival months alike (lake report 2025-26 p.{int(bod.page.mode().iloc[0])})")
 
 
@@ -128,13 +129,15 @@ def ghat(site, g, lim, latest_durga, lower_tag=None):
     if not below2.empty and latest_do.empty and tier != "HIGH":
         tier = "HIGH"
         tier_note = (f"Raised to HIGH: near-zero oxygen on record and not tested in Durga {latest_durga}; "
-                     "unknown is not safe")
+                     "missing data is not treated as clean")
 
     reasons = []
     if len(do):
+        # A "0 of N" claim is checked against every reading, so it cites all their pages.
         reasons.append({"text": f"Dissolved oxygen below the bathing limit of {lim['oxygen_min']:g} mg/l "
                                 f"in {len(below5)} of {len(do)} readings",
-                        "evidence": [evidence(r) for r in below5.itertuples()]})
+                        "evidence": [evidence(r) for r in below5.itertuples()],
+                        **({"pages": pages(do)} if below5.empty else {})})
     if not below2.empty:
         reasons.append({"text": f"Near-zero oxygen (below 2 mg/l) in {len(below2)} reading{'s' * (len(below2) != 1)}, "
                                 f"lowest {below2.value.min():g} mg/l"
@@ -146,12 +149,14 @@ def ghat(site, g, lim, latest_durga, lower_tag=None):
                                 + (f": {why.iloc[0]}" if len(why) else ""), "evidence": []})
     elif latest_do.value.min() < lim["oxygen_min"]:
         low = latest_do.sort_values("value").iloc[[0]]
-        pre = latest_do[latest_do.phase == "pre"].value
-        already = len(pre) and pre.iloc[0] < lim["oxygen_min"]
-        reasons.append({"text": f"In Durga {latest_durga}, oxygen was {low.value.iloc[0]:g} mg/l in the "
-                                f"{low.phase.iloc[0]}-immersion sample"
-                                + (" (already below the limit before immersion)" if already else ""),
-                        "evidence": [evidence(r) for r in low.itertuples()]})
+        pre = latest_do[latest_do.phase == "pre"]
+        already = len(pre) and pre.value.iloc[0] < lim["oxygen_min"] and low.phase.iloc[0] != "pre"
+        if low.phase.iloc[0] == "pre":
+            text = f"In Durga {latest_durga}, oxygen was already {low.value.iloc[0]:g} mg/l before immersion (pre-immersion sample)"
+        else:
+            text = (f"In Durga {latest_durga}, oxygen was {low.value.iloc[0]:g} mg/l in the {low.phase.iloc[0]}-immersion sample"
+                    + (f", and already {pre.value.iloc[0]:g} mg/l before immersion" if already else ""))
+        reasons.append({"text": text, "evidence": [evidence(r) for r in pd.concat([low, pre] if already else [low]).itertuples()]})
     if not drops.empty:
         names = ", ".join(f"{f} {y}" for y, f in drops.index)
         reasons.append({"text": f"Oxygen dropped by more than 2 mg/l during immersion in {names}",
@@ -161,14 +166,16 @@ def ghat(site, g, lim, latest_durga, lower_tag=None):
         reasons.append({"text": f"One week after immersion, oxygen was more than 0.5 mg/l below the "
                                 f"pre-immersion level in {len(unrecovered)} of {len(both)} festivals",
                         "evidence": [evidence(r) for r in do[do.set_index(["year", "festival"]).index.isin(unrecovered.index)
-                                                             & do.phase.isin(["pre", "after"])].itertuples()]})
+                                                             & do.phase.isin(["pre", "after"])].itertuples()],
+                        **({"pages": pages(do[do.phase.isin(["pre", "after"])])} if unrecovered.empty else {})})
     if not star.empty:
         reasons.append({"text": "Temporary kund: no before or after sample in "
                                 + ", ".join(sorted({f"{f} {y}" for y, f in zip(star.year, star.festival)}))
                                 + " because the kund was not built yet or already dismantled (report remark)",
                         "evidence": [], "pages": pages(star)})
     if len(bod):
-        reasons.append({"text": f"BOD above the bathing limit of {lim['bod_max']:g} mg/l "
+        reasons.append({"text": f"BOD above the bathing limit of {lim['bod_max']:g} mg/l (report does not print "
+                                f"the BOD test method) "
                                 f"in {int((bod.value > lim['bod_max']).sum())} of {len(bod)} readings",
                         "evidence": [evidence(r) for r in bod[bod.value > lim["bod_max"]].itertuples()]})
     for r in reasons:
@@ -197,8 +204,9 @@ def ghat(site, g, lim, latest_durga, lower_tag=None):
     if temporary:
         actions.append("Line the temporary kund with a removable synthetic liner (CPCB guideline, 2025 report p.14)")
     if water_body == "Upper Lake":
-        actions.append("Keep immersion out of the open Upper Lake, which feeds water-supply intakes "
-                       "(NGT order OA 673/2018, 2025 report p.2)")
+        actions.append("Keep immersion out of the open Upper Lake, which has water-supply intake wells (lake report "
+                       "2023-24 p.1-4); CPCB guidelines under NGT order OA 673/2018 call for temporary confined ponds "
+                       "(2025 report p.2 and p.14)")
     if not verify.empty:
         actions.append("Ask MPPCB to confirm the flagged readings (see verify) and their units")
 
@@ -237,7 +245,8 @@ def kund_vs_river():
     k, r = by_type["kund_or_pond"], by_type["river"]
     return {"text": f"Across Madhya Pradesh, oxygen was below 4 mg/l in {k['below_4_pct']}% of kund readings "
                     f"vs {r['below_4_pct']}% of river readings. In kunds, {k['pre_below_4_pct']}% of pre-immersion samples "
-                    f"were below 4 mg/l vs {k['after_below_4_pct']}% of samples one week after.",
+                    f"were below 4 mg/l vs {k['after_below_4_pct']}% of samples one week after "
+                    f"(site type read from site names; implausible readings left out).",
             "source": "MPPCB reports 2023-2025, statewide tables (site type from site names)", **by_type}
 
 
@@ -276,7 +285,7 @@ def build():
     ghats.sort(key=lambda x: (-tier_order[x["tier"]], x["points"], any("intake" in t for t in x["tags"])), reverse=True)
     for rank, x in enumerate(ghats, 1):
         x["rank"] = rank
-        x["tied_with"] = [y["site"] for y in ghats if y["points"] == x["points"] and y is not x]
+        x["tied_with"] = [y["site"] for y in ghats if (y["points"], y["tier"]) == (x["points"], x["tier"]) and y is not x]
     return {"visarjan_date": VISARJAN_DATE, "how_ranked": HOW_RANKED, "standard": lim, "scoring": {"points": POINTS, "tiers": dict(
         (n, c) for c, n in TIERS)}, "latest_durga": latest_durga, "ghats": ghats,
         "context": {"kund_vs_river": kund_vs_river(), "lake_baseline": lake_baseline()},
@@ -289,7 +298,7 @@ def llm_input(ranking):
     return {
         "visarjan_date": ranking["visarjan_date"],
         "how_ranked": ranking["how_ranked"],
-        "standard": {k: ranking["standard"][k] for k in ["class", "oxygen_min", "bod_max", "fish_oxygen_min"]},
+        "standard": {k: ranking["standard"][k] for k in ["class", "why", "oxygen_min", "bod_max", "fish_oxygen_min"]},
         "ghats": [{"rank": g["rank"], "site": g["site"], "tier": g["tier"], "points": g["points"],
                    "tied_with": g["tied_with"], "tier_note": g["tier_note"], "tags": g["tags"],
                    "reasons": [{"text": r["text"], "pages": r["pages"]} for r in g["reasons"]],
