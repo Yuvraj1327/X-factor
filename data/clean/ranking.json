@@ -539,6 +539,161 @@
         }
       },
       "untested_latest_durga": true,
+      "oxygen_grid": [
+        {
+          "year": 2023,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 5.6,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26"
+            },
+            "during": {
+              "value": 4.5,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26"
+            },
+            "after": {
+              "value": 0.0,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26",
+              "quality_flag": "zero oxygen: verify with MPPCB"
+            }
+          }
+        },
+        {
+          "year": 2023,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 0.0,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60",
+              "quality_flag": "zero oxygen: verify with MPPCB"
+            },
+            "during": {
+              "value": 0.0,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60",
+              "quality_flag": "zero oxygen: verify with MPPCB"
+            },
+            "after": {
+              "value": 4.2,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60"
+            }
+          }
+        },
+        {
+          "year": 2024,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 5.2,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            },
+            "during": {
+              "value": 4.1,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            },
+            "after": {
+              "value": 4.2,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            }
+          }
+        },
+        {
+          "year": 2024,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 4.2,
+              "status": "measured",
+              "page": 25,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=25"
+            },
+            "during": {
+              "value": 2.2,
+              "status": "measured",
+              "page": 25,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=25"
+            },
+            "after": {
+              "value": 2.4,
+              "status": "measured",
+              "page": 25,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=25"
+            }
+          }
+        },
+        {
+          "year": 2025,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": null,
+              "status": "missing",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28",
+              "missing_reason": "kund not built yet at pre-immersion sampling (report remark)"
+            },
+            "during": {
+              "value": 0.0,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28",
+              "quality_flag": "zero oxygen: verify with MPPCB"
+            },
+            "after": {
+              "value": null,
+              "status": "missing",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28",
+              "missing_reason": "kund dismantled before post-immersion sampling (report remark)"
+            }
+          }
+        },
+        {
+          "year": 2025,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": null,
+              "status": "missing",
+              "page": null,
+              "pdf": null,
+              "missing_reason": "no table for this site in the report"
+            },
+            "during": {
+              "value": null,
+              "status": "missing",
+              "page": null,
+              "pdf": null,
+              "missing_reason": "no table for this site in the report"
+            },
+            "after": {
+              "value": null,
+              "status": "missing",
+              "page": null,
+              "pdf": null,
+              "missing_reason": "no table for this site in the report"
+            }
+          }
+        }
+      ],
       "rank": 1,
       "tied_with": []
     },
@@ -884,6 +1039,158 @@
         }
       },
       "untested_latest_durga": true,
+      "oxygen_grid": [
+        {
+          "year": 2023,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 7.5,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            },
+            "during": {
+              "value": 7.0,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            },
+            "after": {
+              "value": 3.2,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            }
+          }
+        },
+        {
+          "year": 2023,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 4.6,
+              "status": "measured",
+              "page": 61,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=61"
+            },
+            "during": {
+              "value": 4.3,
+              "status": "measured",
+              "page": 61,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=61"
+            },
+            "after": {
+              "value": 10.4,
+              "status": "measured",
+              "page": 61,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=61",
+              "quality_flag": "unusually high oxygen: verify"
+            }
+          }
+        },
+        {
+          "year": 2024,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 4.8,
+              "status": "measured",
+              "page": 71,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=71"
+            },
+            "during": {
+              "value": 3.8,
+              "status": "measured",
+              "page": 71,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=71"
+            },
+            "after": {
+              "value": 6.5,
+              "status": "measured",
+              "page": 71,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=71"
+            }
+          }
+        },
+        {
+          "year": 2024,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 4.5,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=26"
+            },
+            "during": {
+              "value": 4.1,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=26"
+            },
+            "after": {
+              "value": 4.0,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=26"
+            }
+          }
+        },
+        {
+          "year": 2025,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": null,
+              "status": "missing",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29",
+              "missing_reason": "kund not built yet at pre-immersion sampling (report remark)"
+            },
+            "during": {
+              "value": 0.6,
+              "status": "measured",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29"
+            },
+            "after": {
+              "value": null,
+              "status": "missing",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29",
+              "missing_reason": "kund dismantled before post-immersion sampling (report remark)"
+            }
+          }
+        },
+        {
+          "year": 2025,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": null,
+              "status": "missing",
+              "page": null,
+              "pdf": null,
+              "missing_reason": "no table for this site in the report"
+            },
+            "during": {
+              "value": null,
+              "status": "missing",
+              "page": null,
+              "pdf": null,
+              "missing_reason": "no table for this site in the report"
+            },
+            "after": {
+              "value": null,
+              "status": "missing",
+              "page": null,
+              "pdf": null,
+              "missing_reason": "no table for this site in the report"
+            }
+          }
+        }
+      ],
       "rank": 2,
       "tied_with": []
     },
@@ -1288,6 +1595,152 @@
         }
       },
       "untested_latest_durga": false,
+      "oxygen_grid": [
+        {
+          "year": 2023,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 6.6,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            },
+            "during": {
+              "value": 5.8,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            },
+            "after": {
+              "value": 9.5,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            }
+          }
+        },
+        {
+          "year": 2023,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 6.2,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59"
+            },
+            "during": {
+              "value": 6.0,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59"
+            },
+            "after": {
+              "value": 6.5,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59"
+            }
+          }
+        },
+        {
+          "year": 2024,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 4.8,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            },
+            "during": {
+              "value": 4.3,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            },
+            "after": {
+              "value": 3.6,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            }
+          }
+        },
+        {
+          "year": 2024,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 7.5,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            },
+            "during": {
+              "value": 6.4,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            },
+            "after": {
+              "value": 6.5,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            }
+          }
+        },
+        {
+          "year": 2025,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 6.9,
+              "status": "measured",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29"
+            },
+            "during": {
+              "value": 6.9,
+              "status": "measured",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29"
+            },
+            "after": {
+              "value": 6.2,
+              "status": "measured",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29"
+            }
+          }
+        },
+        {
+          "year": 2025,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 2.5,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            },
+            "during": {
+              "value": 2.4,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            },
+            "after": {
+              "value": 2.6,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            }
+          }
+        }
+      ],
       "rank": 3,
       "tied_with": []
     },
@@ -1671,6 +2124,152 @@
         }
       },
       "untested_latest_durga": false,
+      "oxygen_grid": [
+        {
+          "year": 2023,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 5.9,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=28"
+            },
+            "during": {
+              "value": 5.2,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=28"
+            },
+            "after": {
+              "value": 5.0,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=28"
+            }
+          }
+        },
+        {
+          "year": 2023,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 4.5,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60"
+            },
+            "during": {
+              "value": 4.0,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60"
+            },
+            "after": {
+              "value": 5.0,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60"
+            }
+          }
+        },
+        {
+          "year": 2024,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 7.4,
+              "status": "measured",
+              "page": 72,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=72"
+            },
+            "during": {
+              "value": 6.8,
+              "status": "measured",
+              "page": 72,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=72"
+            },
+            "after": {
+              "value": 6.3,
+              "status": "measured",
+              "page": 72,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=72"
+            }
+          }
+        },
+        {
+          "year": 2024,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 6.8,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=26"
+            },
+            "during": {
+              "value": 5.4,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=26"
+            },
+            "after": {
+              "value": 3.8,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=26"
+            }
+          }
+        },
+        {
+          "year": 2025,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 7.0,
+              "status": "measured",
+              "page": 30,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=30"
+            },
+            "during": {
+              "value": 6.0,
+              "status": "measured",
+              "page": 30,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=30"
+            },
+            "after": {
+              "value": 6.5,
+              "status": "measured",
+              "page": 30,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=30"
+            }
+          }
+        },
+        {
+          "year": 2025,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 2.5,
+              "status": "measured",
+              "page": 65,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=65"
+            },
+            "during": {
+              "value": 2.8,
+              "status": "measured",
+              "page": 65,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=65"
+            },
+            "after": {
+              "value": 7.4,
+              "status": "measured",
+              "page": 65,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=65"
+            }
+          }
+        }
+      ],
       "rank": 4,
       "tied_with": []
     },
@@ -2072,6 +2671,152 @@
         }
       },
       "untested_latest_durga": false,
+      "oxygen_grid": [
+        {
+          "year": 2023,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 6.4,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26"
+            },
+            "during": {
+              "value": 6.1,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26"
+            },
+            "after": {
+              "value": 7.8,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26"
+            }
+          }
+        },
+        {
+          "year": 2023,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 4.5,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59"
+            },
+            "during": {
+              "value": 4.2,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59"
+            },
+            "after": {
+              "value": 4.4,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59"
+            }
+          }
+        },
+        {
+          "year": 2024,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 4.3,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            },
+            "during": {
+              "value": 4.0,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            },
+            "after": {
+              "value": 4.6,
+              "status": "measured",
+              "page": 69,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=69"
+            }
+          }
+        },
+        {
+          "year": 2024,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 6.6,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            },
+            "during": {
+              "value": 4.5,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            },
+            "after": {
+              "value": 4.4,
+              "status": "measured",
+              "page": 24,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=24"
+            }
+          }
+        },
+        {
+          "year": 2025,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 7.3,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28"
+            },
+            "during": {
+              "value": 6.0,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28"
+            },
+            "after": {
+              "value": 6.5,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28"
+            }
+          }
+        },
+        {
+          "year": 2025,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 7.1,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            },
+            "during": {
+              "value": 6.2,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            },
+            "after": {
+              "value": 6.6,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            }
+          }
+        }
+      ],
       "rank": 5,
       "tied_with": []
     },
@@ -2446,6 +3191,155 @@
         }
       },
       "untested_latest_durga": false,
+      "oxygen_grid": [
+        {
+          "year": 2023,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 7.9,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            },
+            "during": {
+              "value": 6.5,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            },
+            "after": {
+              "value": 5.1,
+              "status": "measured",
+              "page": 27,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=27"
+            }
+          }
+        },
+        {
+          "year": 2023,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 6.5,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59"
+            },
+            "during": {
+              "value": 10.2,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59",
+              "quality_flag": "unusually high oxygen: verify"
+            },
+            "after": {
+              "value": 8.6,
+              "status": "measured",
+              "page": 59,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=59"
+            }
+          }
+        },
+        {
+          "year": 2024,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 9.0,
+              "status": "measured",
+              "page": 71,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=71"
+            },
+            "during": {
+              "value": 5.3,
+              "status": "measured",
+              "page": 71,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=71"
+            },
+            "after": {
+              "value": 11.0,
+              "status": "measured",
+              "page": 71,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=71",
+              "quality_flag": "unusually high oxygen: verify"
+            }
+          }
+        },
+        {
+          "year": 2024,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 8.6,
+              "status": "measured",
+              "page": 23,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=23"
+            },
+            "during": {
+              "value": 5.9,
+              "status": "measured",
+              "page": 23,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=23"
+            },
+            "after": {
+              "value": 5.7,
+              "status": "measured",
+              "page": 23,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=23"
+            }
+          }
+        },
+        {
+          "year": 2025,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 5.6,
+              "status": "measured",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29"
+            },
+            "during": {
+              "value": 7.0,
+              "status": "measured",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29"
+            },
+            "after": {
+              "value": 6.4,
+              "status": "measured",
+              "page": 29,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=29"
+            }
+          }
+        },
+        {
+          "year": 2025,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 8.5,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            },
+            "during": {
+              "value": 8.5,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64"
+            },
+            "after": {
+              "value": 10.8,
+              "status": "measured",
+              "page": 64,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=64",
+              "quality_flag": "unusually high oxygen: verify"
+            }
+          }
+        }
+      ],
       "rank": 6,
       "tied_with": []
     },
@@ -2661,6 +3555,152 @@
         }
       },
       "untested_latest_durga": false,
+      "oxygen_grid": [
+        {
+          "year": 2023,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 6.2,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26"
+            },
+            "during": {
+              "value": 6.7,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26"
+            },
+            "after": {
+              "value": 6.5,
+              "status": "measured",
+              "page": 26,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=26"
+            }
+          }
+        },
+        {
+          "year": 2023,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 5.4,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60"
+            },
+            "during": {
+              "value": 5.0,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60"
+            },
+            "after": {
+              "value": 5.7,
+              "status": "measured",
+              "page": 60,
+              "pdf": "/reports/2023_MPPCB_Idol_Immersion_Report.pdf#page=60"
+            }
+          }
+        },
+        {
+          "year": 2024,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 4.3,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            },
+            "during": {
+              "value": 3.9,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            },
+            "after": {
+              "value": 6.3,
+              "status": "measured",
+              "page": 70,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=70"
+            }
+          }
+        },
+        {
+          "year": 2024,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 7.6,
+              "status": "measured",
+              "page": 25,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=25"
+            },
+            "during": {
+              "value": 6.4,
+              "status": "measured",
+              "page": 25,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=25"
+            },
+            "after": {
+              "value": 7.6,
+              "status": "measured",
+              "page": 25,
+              "pdf": "/reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=25"
+            }
+          }
+        },
+        {
+          "year": 2025,
+          "festival": "Ganesh",
+          "phases": {
+            "pre": {
+              "value": 6.5,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28"
+            },
+            "during": {
+              "value": 5.6,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28"
+            },
+            "after": {
+              "value": 6.0,
+              "status": "measured",
+              "page": 28,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=28"
+            }
+          }
+        },
+        {
+          "year": 2025,
+          "festival": "Durga",
+          "phases": {
+            "pre": {
+              "value": 6.6,
+              "status": "measured",
+              "page": 65,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=65"
+            },
+            "during": {
+              "value": 4.9,
+              "status": "measured",
+              "page": 65,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=65"
+            },
+            "after": {
+              "value": 8.2,
+              "status": "measured",
+              "page": 65,
+              "pdf": "/reports/2025_MPPCB_Ganesh_Durga_Visarjan_Report.pdf#page=65"
+            }
+          }
+        }
+      ],
       "rank": 7,
       "tied_with": []
     }

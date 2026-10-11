@@ -131,3 +131,21 @@ def test_second_reading_covers_every_printed_cell_and_agrees():
     printed = CLEAN[CLEAN.source_page.notna() & CLEAN.value_as_printed.notna()]
     assert len(v) == len(printed)
     assert set(v.verdict) == {"match"}, v[v.verdict != "match"]
+
+
+def test_oxygen_grid_is_complete_and_honest():
+    events = CLEAN[["year", "festival"]].drop_duplicates()
+    for g in RANKING["ghats"]:
+        grid = g["oxygen_grid"]
+        assert len(grid) == len(events)
+        for e in grid:
+            for ph, cell in e["phases"].items():
+                row = CLEAN[(CLEAN.site == g["site"]) & (CLEAN.year == e["year"]) & (CLEAN.festival == e["festival"])
+                            & (CLEAN.phase == ph) & (CLEAN.parameter == "Dissolved oxygen")].iloc[0]
+                assert cell["status"] == row.status
+                if row.status == "measured":
+                    assert cell["value"] == row.value
+                else:
+                    assert cell["value"] is None
+                if row.status == "missing":
+                    assert cell["missing_reason"]

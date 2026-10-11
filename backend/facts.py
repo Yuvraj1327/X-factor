@@ -212,6 +212,7 @@ def ghat(site, g, lim, latest_durga, lower_tag=None):
         actions.append("Ask MPPCB to confirm the flagged readings (see verify) and their units")
 
     coverage = g.groupby("status").size().to_dict()
+    grid = oxygen_grid(g)
     return {
         "site": site, "water_body": water_body, "points": points, "tier": tier, "tier_note": tier_note, "score_parts": counts,
         "tags": tags, "site_note": g.site_note.dropna().iloc[0] if g.site_note.notna().any() else "",
@@ -229,7 +230,25 @@ def ghat(site, g, lim, latest_durga, lower_tag=None):
                      "missing": coverage.get("missing", 0),
                      "missing_reasons": g[g.status == "missing"].missing_reason.value_counts().to_dict()},
         "untested_latest_durga": bool(latest_do.empty),
+        "oxygen_grid": grid,
     }
+
+
+def oxygen_grid(g):
+    """Every festival x phase oxygen cell for one ghat, so a heatmap can show gaps as gaps."""
+    do = g[g.parameter == "Dissolved oxygen"]
+    events = do[["year", "festival"]].drop_duplicates().sort_values(["year", "festival"], ascending=[True, False])
+    cells = {(r.year, r.festival, r.phase): r for r in do.itertuples()}
+    out = []
+    for e in events.itertuples():
+        phases = {}
+        for ph in PHASES:
+            r = cells.get((e.year, e.festival, ph))
+            phases[ph] = None if r is None else {k: v for k, v in evidence(r).items()
+                                                 if k not in ("year", "festival", "phase", "parameter")} \
+                | ({"missing_reason": r.missing_reason} if r.status == "missing" else {})
+        out.append({"year": int(e.year), "festival": e.festival, "phases": phases})
+    return out
 
 
 def kund_vs_river():
