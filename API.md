@@ -1,6 +1,6 @@
 # API for the UI team
 
-Base URL: local `http://localhost:8000`, hosted: the Render URL. Interactive docs at `/docs`.
+Base URL: hosted `https://api-production-9a4c9.up.railway.app`, local `http://localhost:8000`. Interactive docs at `/docs`.
 All endpoints are `GET`, public, CORS open. Data is read-only.
 
 ## `GET /ranking`

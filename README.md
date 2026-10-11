@@ -12,6 +12,8 @@ page 60 of an 87-page report.
 **What it gives the officer:** the 7 Bhopal ghats ranked by risk, each reason in plain words with every number linked to
 its report page, actions per ghat, and a one-page brief in English and Hindi to forward on WhatsApp.
 
+**Live API:** https://api-production-9a4c9.up.railway.app (docs: `/docs`)
+
 ## Run it (5 steps)
 
 ```bash
@@ -25,8 +27,9 @@ uvicorn backend.main:app            # open http://localhost:8000/docs
 Rebuild the data after adding readings: `python backend/clean.py && python backend/clean_statewide.py &&
 python backend/clean_lake.py && python backend/facts.py`. Tests: `python -m pytest tests/`.
 
-**Deploy (Render):** New Web Service from this repo, build `pip install -r requirements.txt`, start
-`uvicorn backend.main:app --host 0.0.0.0 --port $PORT`, add `ANTHROPIC_API_KEY` as an environment variable.
+**Deploy (Railway):** `railway init`, `railway add --service api`, set `ANTHROPIC_API_KEY` with
+`railway variable set ANTHROPIC_API_KEY --stdin --service api`, then `railway up --service api` and `railway domain`.
+Start command and health check are in `railway.json`.
 
 ## How it works
 

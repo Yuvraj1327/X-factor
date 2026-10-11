@@ -39,7 +39,10 @@ Structure: one-line purpose; the top 3 ghats (tier, 2 reasons, 2 actions each); 
 3 data gaps; date of visarjan. Plain short sentences. No more than 250 words."""
 LANG = {"en": "Write the brief in English.",
         "hi": "Write the brief in simple Hindi (Devanagari). Keep ghat names, 'mg/l', 'BOD', 'MPPCB' and "
-              "'CPCB' as they are."}
+              "'CPCB' as they are. Use these Hindi terms, not English words: dissolved oxygen = घुली ऑक्सीजन (DO), "
+              "bathing limit = स्नान सीमा, reading = रीडिंग, HIGH = उच्च जोखिम, MEDIUM = मध्यम जोखिम, "
+              "WATCH = निगरानी, aerator = एरेटर, not tested = जाँच नहीं हुई, temporary kund = अस्थायी कुंड, "
+              "before/during/one week after immersion = विसर्जन से पहले / दौरान / एक सप्ताह बाद."}
 
 
 def load_facts():
