@@ -1,24 +1,34 @@
-Durga visarjan 20 Oct 2026: ghats that need attention first (MPPCB readings 2023-2025).
+# Durga Visarjan Brief: Bhopal Immersion Ghats
 
-1. Bairagarh (Sant Hirdaram) kund: HIGH
-   - Dissolved oxygen below the bathing limit of 5 mg/l in 11 of 13 readings (2023 p.26, 2023 p.60, 2024 p.25)
-   - Near-zero oxygen (below 2 mg/l) in 4 readings, lowest 0 mg/l (printed as 0 in the report; verify with MPPCB) (2023 p.26, 2023 p.60, 2025 p.28)
-   > Place aerators before 20 Oct and keep them running for the week after immersion
-   > Ask MPPCB to sample before (by 18 Oct), during, and one week after (about 27 Oct); for a temporary kund, sample inside the kund while it stands
-2. Malikhedi kund: HIGH (Raised to HIGH: near-zero oxygen on record and not tested in Durga 2025; missing data is not treated as clean)
-   - Dissolved oxygen below the bathing limit of 5 mg/l in 9 of 13 readings (2023 p.27, 2023 p.61, 2024 p.26)
-   - Near-zero oxygen (below 2 mg/l) in 1 reading, lowest 0.6 mg/l (2025 p.29)
-   > Place aerators before 20 Oct and keep them running for the week after immersion
-   > Ask MPPCB to sample before (by 18 Oct), during, and one week after (about 27 Oct); for a temporary kund, sample inside the kund while it stands
-3. Rani Kamlapati ghat / Kamla Park kund: MEDIUM
-   - Dissolved oxygen below the bathing limit of 5 mg/l in 6 of 18 readings (2024 p.70, 2025 p.64)
-   - In Durga 2025, oxygen was 2.4 mg/l in the during-immersion sample, and already 2.5 mg/l before immersion (2025 p.64)
-   > Place aerators before 20 Oct and keep them running for the week after immersion
-   > Collect idols, flowers and left-over material within 48 hours (CPCB guideline, 2025 report p.23)
+**Purpose:** This brief shows which ghats need oxygen support and sampling before Durga visarjan.
 
-How ranked: Ranked on dissolved oxygen only: readings below 5, 4 and 2 mg/l, drops of more than 2 mg/l during immersion, and no recovery a week later.
+## Top 3 Ghats
 
-Not in the data:
-- No coliform (bacteria) test at the ghats, so bathing safety from germs is unknown
-- No water temperature and no time of sampling
-- Units are not printed in the MPPCB immersion reports; standard units are assumed
+**1. Bairagarh (Sant Hirdaram) kund: HIGH**
+- Dissolved oxygen was below the bathing limit of 5 mg/l in 11 of 13 readings (2023 p.26, 2023 p.60, 2024 p.25, 2024 p.69, 2025 p.28).
+- Near-zero oxygen (below 2 mg/l) appeared in 4 readings, lowest 0 mg/l (2023 p.26, 2023 p.60, 2025 p.28). Verify with MPPCB.
+- **Action:** Place aerators before 20 Oct and keep them running for the week after immersion.
+- **Action:** Keep immersion out of the open Upper Lake, which has water-supply intake wells (lake report 2023-24 p.1-4).
+
+**2. Malikhedi kund: HIGH**
+- Dissolved oxygen was below the bathing limit of 5 mg/l in 9 of 13 readings (2023 p.27, 2023 p.61, 2024 p.26, 2024 p.71, 2025 p.29).
+- It was not tested in Durga 2025. It was raised to HIGH because it has near-zero oxygen on record.
+- **Action:** Place aerators before 20 Oct and keep them running for the week after immersion.
+- **Action:** Ask MPPCB to sample inside the kund before (by 18 Oct), during, and one week after (about 27 Oct).
+
+**3. Rani Kamlapati ghat / Kamla Park kund: MEDIUM**
+- In Durga 2025, oxygen was 2.4 mg/l during immersion and already 2.5 mg/l before (2025 p.64).
+- One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 3 of 6 festivals (2024 p.24, 2024 p.70, 2025 p.29).
+- **Action:** Place aerators before 20 Oct and keep them running for the week after immersion.
+- **Action:** Collect idols, flowers and left-over material within 48 hours (CPCB guideline, 2025 report p.23).
+
+## How Ghats Were Ranked
+Ghats were ranked on dissolved oxygen only. BOD and metals were not scored.
+
+## Data Gaps
+- The ghats have no coliform test.
+- The reports do not print units.
+- The data cannot separate immersion from sewage as the cause of low oxygen.
+
+## Visarjan Date
+2026-10-20

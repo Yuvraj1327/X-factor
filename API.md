@@ -48,6 +48,8 @@ The dashboard's main data. 7 ghats, already ranked. Nothing to compute in the UI
   },
   "not_in_data": ["No coliform (bacteria) test at the ghats, ...", "..."],   // show as a "What this data does not cover" box
   "data_warnings": ["Zinc in Ganesh 2024 runs 16x other festivals: ...", "..."],
+  "verification": {"method": "Claude read each report page independently; ...", "pages": 19, "cells": 1476, "match": 1476},
+                                                                            // show as "every number read twice: 1,476/1,476 agree"
   "sources": ["reports/2023_MPPCB_Idol_Immersion_Report.pdf", "..."]
 }
 ```

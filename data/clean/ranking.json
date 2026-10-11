@@ -2746,6 +2746,12 @@
     "Zinc in Ganesh 2024 runs 16x other festivals: possible unit or method change; treat these metal readings as unverified",
     "Metals in Durga 2025: after-immersion value identical to pre-immersion at 5 of 5 ghats (15 metal series): possible copy in the report; treat as unverified"
   ],
+  "verification": {
+    "method": "Claude read each report page independently; code compared its reading with ours",
+    "pages": 19,
+    "cells": 1476,
+    "match": 1476
+  },
   "sources": [
     "reports/2023_MPPCB_Idol_Immersion_Report.pdf",
     "reports/2024_MPPCB_Ganesh_Durga_Visarjan_Report.pdf",

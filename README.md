@@ -35,6 +35,7 @@ reports/*.pdf  ->  data/readings/*.csv  ->  backend/clean.py  ->  data/clean/bho
                    data/statewide/      ->  clean_statewide.py ->  data/clean/statewide_clean.csv
 reports/lake_*.pdf                      ->  clean_lake.py      ->  data/clean/lake_baseline.csv
                                             backend/facts.py   ->  ranking.json (UI)  +  llm_input.json (LLM)
+                                            backend/verify_llm.py -> Claude re-reads every report page (second reader)
                                             backend/brief.py   ->  English / Hindi brief, checked
                                             backend/main.py    ->  GET /ranking, GET /brief, /reports/*.pdf
 ```
@@ -64,7 +65,9 @@ reports/lake_*.pdf                      ->  clean_lake.py      ->  data/clean/la
 
 Works:
 - Cleaned data verified against the PDFs: 2023 (546/546 rows), 2024 (546/546), 2025 (all rows); lake baseline ~970 values.
-- `/ranking`, `/brief` (English, Hindi, WhatsApp), PDF page links, 31 tests.
+- Every printed cell read twice: Claude read all 19 report pages independently (`backend/verify_llm.py`) and code
+  compared its reading with the parser's: 1,476 of 1,476 cells agree (`data/clean/llm_verification.csv`).
+- `/ranking`, `/brief` (English, Hindi, WhatsApp), PDF page links, 32 tests.
 
 Doesn't / not covered:
 - No coliform test at the ghats, no temperature, no sampling time, no idol counts; units are assumed (not printed).

@@ -275,6 +275,17 @@ def lake_baseline():
     return lines
 
 
+def verification():
+    """Summary of the second reading by Claude (backend/verify_llm.py), if it has been run."""
+    path = CLEAN / "llm_verification.csv"
+    if not path.exists():
+        return None
+    v = pd.read_csv(path)
+    return {"method": "Claude read each report page independently; code compared its reading with ours",
+            "pages": int(v.groupby(["report_file", "source_page"]).ngroups), "cells": len(v),
+            **v.verdict.value_counts().to_dict()}
+
+
 def build():
     df = pd.read_csv(CLEAN / "bhopal_readings_clean.csv")
     lim = limits()
@@ -289,7 +300,7 @@ def build():
     return {"visarjan_date": VISARJAN_DATE, "how_ranked": HOW_RANKED, "standard": lim, "scoring": {"points": POINTS, "tiers": dict(
         (n, c) for c, n in TIERS)}, "latest_durga": latest_durga, "ghats": ghats,
         "context": {"kund_vs_river": kund_vs_river(), "lake_baseline": lake_baseline()},
-        "not_in_data": NOT_IN_DATA, "data_warnings": data_warnings(df),
+        "not_in_data": NOT_IN_DATA, "data_warnings": data_warnings(df), "verification": verification(),
         "sources": sorted(df.report_file.dropna().unique().tolist())}
 
 

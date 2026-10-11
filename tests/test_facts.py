@@ -124,3 +124,10 @@ def test_lake_context_is_marked_and_statewide_junk_is_excluded():
     statewide = pd.read_csv(ROOT / "data" / "clean" / "statewide_clean.csv")
     assert statewide.quality_flag.fillna("").str.contains("implausible").sum() > 0
     assert "implausible readings left out" in LLM["context"][0]
+
+
+def test_second_reading_covers_every_printed_cell_and_agrees():
+    v = pd.read_csv(ROOT / "data" / "clean" / "llm_verification.csv")
+    printed = CLEAN[CLEAN.source_page.notna() & CLEAN.value_as_printed.notna()]
+    assert len(v) == len(printed)
+    assert set(v.verdict) == {"match"}, v[v.verdict != "match"]
