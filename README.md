@@ -1,6 +1,6 @@
 # Visarjan Ghat Watch
 
-**Team:** X-factor · **Members:** _add names_ · **Track:** 2, Visarjan Ghat Watch (Bhopal Impact Lab, 11 Oct 2026)
+**Team:** X-factor · **Members:** Muiz Khan, Aradhya Jain, Gargi Dixit, Harsh Shrivastava, Yuvraj Gupta · **Track:** 2, Visarjan Ghat Watch (Bhopal Impact Lab, 11 Oct 2026)
 
 **User:** the Bhopal Municipal Corporation officer who plans Durga visarjan at the ghats (20 October 2026) and
 decides where to send aerators, cleaning crews and water testing.
