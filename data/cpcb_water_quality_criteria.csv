@@ -1,0 +1,6 @@
+parameter,water_class,min_value,max_value,unit,description
+dissolved_oxygen,B,5.0,,mg/L,Min 5.0 mg/L for Class B bathing/immersion water
+bod,B,,3.0,mg/L,Max 3.0 mg/L for Class B
+ph,B,6.5,8.5,,pH range 6.5 to 8.5 for Class B
+fecal_coliform,B,,500,MPN/100ml,Max 500 MPN/100ml for Class B
+total_coliform,B,,5000,MPN/100ml,Max 5000 MPN/100ml for Class B
