@@ -314,6 +314,13 @@ def build():
     ghats = [ghat(site, g, lim, latest_durga, lower_tag) for site, g in df.groupby("site")]
     tier_order = {name: i for i, (_, name) in enumerate(TIERS)}
     ghats.sort(key=lambda x: (-tier_order[x["tier"]], x["points"], any("intake" in t for t in x["tags"])), reverse=True)
+    import sys
+    sys.path.insert(0, str(ROOT))  # lets "python backend/facts.py" import the backend package
+    from backend.brief import action_hi, reason_hi  # fixed Hindi templates, same as the brief
+    for x in ghats:
+        for r in x["reasons"]:
+            r["text_hi"] = reason_hi(r["text"])
+        x["actions_hi"] = [action_hi(a) for a in x["actions"]]
     for rank, x in enumerate(ghats, 1):
         x["rank"] = rank
         x["tied_with"] = [y["site"] for y in ghats if (y["points"], y["tier"]) == (x["points"], x["tier"]) and y is not x]

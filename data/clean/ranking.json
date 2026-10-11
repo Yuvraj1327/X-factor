@@ -167,7 +167,8 @@
             "2024 p.25",
             "2024 p.69",
             "2025 p.28"
-          ]
+          ],
+          "text_hi": "घुली ऑक्सीजन (DO) 13 में से 11 रीडिंग में स्नान सीमा 5 mg/l से कम"
         },
         {
           "text": "Near-zero oxygen (below 2 mg/l) in 4 readings, lowest 0 mg/l (printed as 0 in the report; verify with MPPCB)",
@@ -221,12 +222,14 @@
             "2023 p.26",
             "2023 p.60",
             "2025 p.28"
-          ]
+          ],
+          "text_hi": "4 रीडिंग में ऑक्सीजन लगभग शून्य (2 mg/l से कम), न्यूनतम 0 mg/l (रिपोर्ट में 0 छपा है; MPPCB से पुष्टि करें)"
         },
         {
           "text": "Not tested in Durga 2025: no table for this site in the report",
           "evidence": [],
-          "pages": []
+          "pages": [],
+          "text_hi": "दुर्गा 2025 में जाँच नहीं हुई (रिपोर्ट में इस स्थल की तालिका नहीं)"
         },
         {
           "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 3 of 4 festivals",
@@ -297,14 +300,16 @@
             "2023 p.26",
             "2024 p.25",
             "2024 p.69"
-          ]
+          ],
+          "text_hi": "4 में से 3 त्योहारों में एक सप्ताह बाद भी ऑक्सीजन पहले से 0.5 mg/l से अधिक कम रही"
         },
         {
           "text": "Temporary kund: no before or after sample in Ganesh 2025 because the kund was not built yet or already dismantled (report remark)",
           "evidence": [],
           "pages": [
             "2025 p.28"
-          ]
+          ],
+          "text_hi": "अस्थायी कुंड: गणेश 2025 में पहले/बाद का नमूना नहीं (कुंड तब बना नहीं था या हटा दिया गया था)"
         },
         {
           "text": "BOD above the bathing limit of 3 mg/l (report does not print the BOD test method) in 13 of 13 readings",
@@ -446,7 +451,8 @@
             "2024 p.25",
             "2024 p.69",
             "2025 p.28"
-          ]
+          ],
+          "text_hi": "BOD 13 में से 13 रीडिंग में स्नान सीमा 3 mg/l से अधिक (रिपोर्ट में BOD जाँच विधि नहीं छपी)"
         }
       ],
       "actions": [
@@ -694,6 +700,15 @@
           }
         }
       ],
+      "actions_hi": [
+        "20 अक्टूबर से पहले कुंड में एरेटर लगाएँ और कुंड रहने तक चलाएँ",
+        "MPPCB से नमूने लेने को कहें: पहले (18 अक्टूबर तक), दौरान, और एक सप्ताह बाद (लगभग 27 अक्टूबर)",
+        "48 घंटे में मूर्तियाँ, फूल और बचा सामान हटाएँ (CPCB दिशानिर्देश, 2025 रिपोर्ट p.23)",
+        "फूल और पूजा सामग्री के लिए अलग डिब्बे रखें ताकि वे पानी में न जाएँ",
+        "अस्थायी कुंड में हटाने योग्य सिंथेटिक लाइनर लगाएँ (CPCB दिशानिर्देश, 2025 रिपोर्ट p.14)",
+        "खुली बड़ी झील (Upper Lake) में विसर्जन न होने दें; वहाँ जल-आपूर्ति के इनटेक कुएँ हैं",
+        "संदिग्ध रीडिंग और उनकी इकाइयों की MPPCB से पुष्टि कराएँ"
+      ],
       "rank": 1,
       "tied_with": []
     },
@@ -815,7 +830,8 @@
             "2024 p.26",
             "2024 p.71",
             "2025 p.29"
-          ]
+          ],
+          "text_hi": "घुली ऑक्सीजन (DO) 13 में से 9 रीडिंग में स्नान सीमा 5 mg/l से कम"
         },
         {
           "text": "Near-zero oxygen (below 2 mg/l) in 1 reading, lowest 0.6 mg/l",
@@ -833,12 +849,14 @@
           ],
           "pages": [
             "2025 p.29"
-          ]
+          ],
+          "text_hi": "1 रीडिंग में ऑक्सीजन लगभग शून्य (2 mg/l से कम), न्यूनतम 0.6 mg/l"
         },
         {
           "text": "Not tested in Durga 2025: no table for this site in the report",
           "evidence": [],
-          "pages": []
+          "pages": [],
+          "text_hi": "दुर्गा 2025 में जाँच नहीं हुई (रिपोर्ट में इस स्थल की तालिका नहीं)"
         },
         {
           "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 1 of 4 festivals",
@@ -866,14 +884,16 @@
           ],
           "pages": [
             "2023 p.27"
-          ]
+          ],
+          "text_hi": "4 में से 1 त्योहारों में एक सप्ताह बाद भी ऑक्सीजन पहले से 0.5 mg/l से अधिक कम रही"
         },
         {
           "text": "Temporary kund: no before or after sample in Ganesh 2025 because the kund was not built yet or already dismantled (report remark)",
           "evidence": [],
           "pages": [
             "2025 p.29"
-          ]
+          ],
+          "text_hi": "अस्थायी कुंड: गणेश 2025 में पहले/बाद का नमूना नहीं (कुंड तब बना नहीं था या हटा दिया गया था)"
         },
         {
           "text": "BOD above the bathing limit of 3 mg/l (report does not print the BOD test method) in 11 of 13 readings",
@@ -995,7 +1015,8 @@
             "2024 p.26",
             "2024 p.71",
             "2025 p.29"
-          ]
+          ],
+          "text_hi": "BOD 13 में से 11 रीडिंग में स्नान सीमा 3 mg/l से अधिक (रिपोर्ट में BOD जाँच विधि नहीं छपी)"
         }
       ],
       "actions": [
@@ -1191,6 +1212,14 @@
           }
         }
       ],
+      "actions_hi": [
+        "20 अक्टूबर से पहले कुंड में एरेटर लगाएँ और कुंड रहने तक चलाएँ",
+        "MPPCB से नमूने लेने को कहें: पहले (18 अक्टूबर तक), दौरान, और एक सप्ताह बाद (लगभग 27 अक्टूबर)",
+        "48 घंटे में मूर्तियाँ, फूल और बचा सामान हटाएँ (CPCB दिशानिर्देश, 2025 रिपोर्ट p.23)",
+        "फूल और पूजा सामग्री के लिए अलग डिब्बे रखें ताकि वे पानी में न जाएँ",
+        "अस्थायी कुंड में हटाने योग्य सिंथेटिक लाइनर लगाएँ (CPCB दिशानिर्देश, 2025 रिपोर्ट p.14)",
+        "संदिग्ध रीडिंग और उनकी इकाइयों की MPPCB से पुष्टि कराएँ"
+      ],
       "rank": 2,
       "tied_with": []
     },
@@ -1279,7 +1308,8 @@
           "pages": [
             "2024 p.70",
             "2025 p.64"
-          ]
+          ],
+          "text_hi": "घुली ऑक्सीजन (DO) 18 में से 6 रीडिंग में स्नान सीमा 5 mg/l से कम"
         },
         {
           "text": "In Durga 2025, oxygen was 2.4 mg/l in the during-immersion sample, and already 2.5 mg/l before immersion",
@@ -1307,7 +1337,8 @@
           ],
           "pages": [
             "2025 p.64"
-          ]
+          ],
+          "text_hi": "दुर्गा 2025 में विसर्जन के दौरान ऑक्सीजन 2.4 mg/l थी, और विसर्जन से पहले ही 2.5 mg/l"
         },
         {
           "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 3 of 6 festivals",
@@ -1377,7 +1408,8 @@
             "2024 p.24",
             "2024 p.70",
             "2025 p.29"
-          ]
+          ],
+          "text_hi": "6 में से 3 त्योहारों में एक सप्ताह बाद भी ऑक्सीजन पहले से 0.5 mg/l से अधिक कम रही"
         },
         {
           "text": "BOD above the bathing limit of 3 mg/l (report does not print the BOD test method) in 18 of 18 readings",
@@ -1570,7 +1602,8 @@
             "2024 p.70",
             "2025 p.29",
             "2025 p.64"
-          ]
+          ],
+          "text_hi": "BOD 18 में से 18 रीडिंग में स्नान सीमा 3 mg/l से अधिक (रिपोर्ट में BOD जाँच विधि नहीं छपी)"
         }
       ],
       "actions": [
@@ -1741,6 +1774,11 @@
           }
         }
       ],
+      "actions_hi": [
+        "20 अक्टूबर से पहले एरेटर लगाएँ और विसर्जन के बाद एक सप्ताह तक चलाएँ",
+        "48 घंटे में मूर्तियाँ, फूल और बचा सामान हटाएँ (CPCB दिशानिर्देश, 2025 रिपोर्ट p.23)",
+        "फूल और पूजा सामग्री के लिए अलग डिब्बे रखें ताकि वे पानी में न जाएँ"
+      ],
       "rank": 3,
       "tied_with": []
     },
@@ -1818,7 +1856,8 @@
             "2023 p.60",
             "2024 p.26",
             "2025 p.65"
-          ]
+          ],
+          "text_hi": "घुली ऑक्सीजन (DO) 18 में से 5 रीडिंग में स्नान सीमा 5 mg/l से कम"
         },
         {
           "text": "In Durga 2025, oxygen was already 2.5 mg/l before immersion (pre-immersion sample)",
@@ -1836,7 +1875,8 @@
           ],
           "pages": [
             "2025 p.65"
-          ]
+          ],
+          "text_hi": "दुर्गा 2025 में विसर्जन से पहले ही ऑक्सीजन 2.5 mg/l थी"
         },
         {
           "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 3 of 6 festivals",
@@ -1906,7 +1946,8 @@
             "2023 p.28",
             "2024 p.26",
             "2024 p.72"
-          ]
+          ],
+          "text_hi": "6 में से 3 त्योहारों में एक सप्ताह बाद भी ऑक्सीजन पहले से 0.5 mg/l से अधिक कम रही"
         },
         {
           "text": "BOD above the bathing limit of 3 mg/l (report does not print the BOD test method) in 18 of 18 readings",
@@ -2099,7 +2140,8 @@
             "2024 p.72",
             "2025 p.30",
             "2025 p.65"
-          ]
+          ],
+          "text_hi": "BOD 18 में से 18 रीडिंग में स्नान सीमा 3 mg/l से अधिक (रिपोर्ट में BOD जाँच विधि नहीं छपी)"
         }
       ],
       "actions": [
@@ -2270,6 +2312,11 @@
           }
         }
       ],
+      "actions_hi": [
+        "20 अक्टूबर से पहले एरेटर लगाएँ और विसर्जन के बाद एक सप्ताह तक चलाएँ",
+        "48 घंटे में मूर्तियाँ, फूल और बचा सामान हटाएँ (CPCB दिशानिर्देश, 2025 रिपोर्ट p.23)",
+        "फूल और पूजा सामग्री के लिए अलग डिब्बे रखें ताकि वे पानी में न जाएँ"
+      ],
       "rank": 4,
       "tied_with": []
     },
@@ -2379,7 +2426,8 @@
             "2023 p.59",
             "2024 p.24",
             "2024 p.69"
-          ]
+          ],
+          "text_hi": "घुली ऑक्सीजन (DO) 18 में से 8 रीडिंग में स्नान सीमा 5 mg/l से कम"
         },
         {
           "text": "Oxygen dropped by more than 2 mg/l during immersion in Durga 2024",
@@ -2407,7 +2455,8 @@
           ],
           "pages": [
             "2024 p.24"
-          ]
+          ],
+          "text_hi": "विसर्जन के दौरान ऑक्सीजन 2 mg/l से अधिक गिरी: दुर्गा 2024"
         },
         {
           "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 2 of 6 festivals",
@@ -2456,7 +2505,8 @@
           "pages": [
             "2024 p.24",
             "2025 p.28"
-          ]
+          ],
+          "text_hi": "6 में से 2 त्योहारों में एक सप्ताह बाद भी ऑक्सीजन पहले से 0.5 mg/l से अधिक कम रही"
         },
         {
           "text": "BOD above the bathing limit of 3 mg/l (report does not print the BOD test method) in 15 of 17 readings",
@@ -2619,7 +2669,8 @@
             "2024 p.69",
             "2025 p.28",
             "2025 p.64"
-          ]
+          ],
+          "text_hi": "BOD 17 में से 15 रीडिंग में स्नान सीमा 3 mg/l से अधिक (रिपोर्ट में BOD जाँच विधि नहीं छपी)"
         }
       ],
       "actions": [
@@ -2817,6 +2868,12 @@
           }
         }
       ],
+      "actions_hi": [
+        "20 अक्टूबर से पहले एरेटर लगाएँ और विसर्जन के बाद एक सप्ताह तक चलाएँ",
+        "48 घंटे में मूर्तियाँ, फूल और बचा सामान हटाएँ (CPCB दिशानिर्देश, 2025 रिपोर्ट p.23)",
+        "फूल और पूजा सामग्री के लिए अलग डिब्बे रखें ताकि वे पानी में न जाएँ",
+        "संदिग्ध रीडिंग और उनकी इकाइयों की MPPCB से पुष्टि कराएँ"
+      ],
       "rank": 5,
       "tied_with": []
     },
@@ -2846,7 +2903,8 @@
             "2024 p.71",
             "2025 p.29",
             "2025 p.64"
-          ]
+          ],
+          "text_hi": "घुली ऑक्सीजन (DO) 18 में से 0 रीडिंग में स्नान सीमा 5 mg/l से कम"
         },
         {
           "text": "Oxygen dropped by more than 2 mg/l during immersion in Durga 2024, Ganesh 2024",
@@ -2895,7 +2953,8 @@
           "pages": [
             "2024 p.23",
             "2024 p.71"
-          ]
+          ],
+          "text_hi": "विसर्जन के दौरान ऑक्सीजन 2 mg/l से अधिक गिरी: दुर्गा 2024, गणेश 2024"
         },
         {
           "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 2 of 6 festivals",
@@ -2944,7 +3003,8 @@
           "pages": [
             "2023 p.27",
             "2024 p.23"
-          ]
+          ],
+          "text_hi": "6 में से 2 त्योहारों में एक सप्ताह बाद भी ऑक्सीजन पहले से 0.5 mg/l से अधिक कम रही"
         },
         {
           "text": "BOD above the bathing limit of 3 mg/l (report does not print the BOD test method) in 16 of 18 readings",
@@ -3117,7 +3177,8 @@
             "2024 p.71",
             "2025 p.29",
             "2025 p.64"
-          ]
+          ],
+          "text_hi": "BOD 18 में से 16 रीडिंग में स्नान सीमा 3 mg/l से अधिक (रिपोर्ट में BOD जाँच विधि नहीं छपी)"
         }
       ],
       "actions": [
@@ -3340,6 +3401,11 @@
           }
         }
       ],
+      "actions_hi": [
+        "48 घंटे में मूर्तियाँ, फूल और बचा सामान हटाएँ (CPCB दिशानिर्देश, 2025 रिपोर्ट p.23)",
+        "फूल और पूजा सामग्री के लिए अलग डिब्बे रखें ताकि वे पानी में न जाएँ",
+        "संदिग्ध रीडिंग और उनकी इकाइयों की MPPCB से पुष्टि कराएँ"
+      ],
       "rank": 6,
       "tied_with": []
     },
@@ -3398,7 +3464,8 @@
           "pages": [
             "2024 p.70",
             "2025 p.65"
-          ]
+          ],
+          "text_hi": "घुली ऑक्सीजन (DO) 18 में से 3 रीडिंग में स्नान सीमा 5 mg/l से कम"
         },
         {
           "text": "In Durga 2025, oxygen was 4.9 mg/l in the during-immersion sample",
@@ -3416,7 +3483,8 @@
           ],
           "pages": [
             "2025 p.65"
-          ]
+          ],
+          "text_hi": "दुर्गा 2025 में विसर्जन के दौरान ऑक्सीजन 4.9 mg/l थी"
         },
         {
           "text": "One week after immersion, oxygen was more than 0.5 mg/l below the pre-immersion level in 0 of 6 festivals",
@@ -3428,7 +3496,8 @@
             "2024 p.70",
             "2025 p.28",
             "2025 p.65"
-          ]
+          ],
+          "text_hi": "6 में से 0 त्योहारों में एक सप्ताह बाद भी ऑक्सीजन पहले से 0.5 mg/l से अधिक कम रही"
         },
         {
           "text": "BOD above the bathing limit of 3 mg/l (report does not print the BOD test method) in 9 of 15 readings",
@@ -3529,7 +3598,8 @@
             "2024 p.70",
             "2025 p.28",
             "2025 p.65"
-          ]
+          ],
+          "text_hi": "BOD 15 में से 9 रीडिंग में स्नान सीमा 3 mg/l से अधिक (रिपोर्ट में BOD जाँच विधि नहीं छपी)"
         }
       ],
       "actions": [
@@ -3700,6 +3770,11 @@
             }
           }
         }
+      ],
+      "actions_hi": [
+        "20 अक्टूबर से पहले एरेटर लगाएँ और विसर्जन के बाद एक सप्ताह तक चलाएँ",
+        "फूल और पूजा सामग्री के लिए अलग डिब्बे रखें ताकि वे पानी में न जाएँ",
+        "खुली बड़ी झील (Upper Lake) में विसर्जन न होने दें; वहाँ जल-आपूर्ति के इनटेक कुएँ हैं"
       ],
       "rank": 7,
       "tied_with": []
