@@ -12,7 +12,7 @@ page 60 of an 87-page report.
 **What it gives the officer:** the 7 Bhopal ghats ranked by risk, each reason in plain words with every number linked to
 its report page, actions per ghat, and a one-page brief in English and Hindi to forward on WhatsApp.
 
-**Live API:** https://api-production-9a4c9.up.railway.app (docs: `/docs`)
+**Live app:** https://visarjan-ghat-watch-dusky.vercel.app · **Live API:** https://api-production-9a4c9.up.railway.app (docs: `/docs`)
 
 ## Run it (5 steps)
 
@@ -23,6 +23,8 @@ pip install -r requirements.txt
 export ANTHROPIC_API_KEY=...        # optional: only needed to regenerate briefs (python backend/brief.py)
 uvicorn backend.main:app            # open http://localhost:8000/docs
 ```
+
+Frontend locally: `cd frontend && python3 -m http.server 8080` (open http://localhost:8080). Deploy: `vercel deploy --prod` from `frontend/`.
 
 Rebuild the data after adding readings: `python backend/clean.py && python backend/clean_statewide.py &&
 python backend/clean_lake.py && python backend/facts.py`. Tests: `python -m pytest tests/`.
@@ -78,7 +80,8 @@ Doesn't / not covered:
 - One sample per phase per festival; newest data is 2025.
 - Metal readings are unverified (Ganesh 2024 runs 7-16x other festivals; Durga 2025 after-values copy pre-values).
 - Two sites may each be two sampling points (Rani Kamlapati / Kamla Park; Hathaikheda kund / dam).
-- No UI in this branch yet; see `API.md` for the contract.
+- Web UI in `frontend/` (plain HTML/CSS/JS, Hindi-first): priority list with oxygen heatmap, ghat detail, brief, data limits,
+  and "check new data" upload preview. It calls the live API described in `API.md`.
 
 ## Data
 
