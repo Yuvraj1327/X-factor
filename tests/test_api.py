@@ -5,6 +5,7 @@ from fastapi.testclient import TestClient
 
 from backend.brief import load_facts, make_brief, passes, reason_hi
 from backend.main import app, brief
+from backend.brief import ROOT as ROOT_DIR
 
 client = TestClient(app)
 FACTS = load_facts()
@@ -75,3 +76,21 @@ def test_briefs_lead_with_not_tested_and_new_claim_words_blocked():
     for text in [template_brief(FACTS, "en"), whatsapp_brief(FACTS, "en")]:
         assert "Not tested in Durga" in text.split("2. ")[0]          # the #1 ghat says it
     assert banned_words("caused by idol immersion; harmful") and banned_words("पानी दूषित है")
+
+
+def test_upload_preview_runs_pipeline_and_saves_nothing():
+    from backend.facts import CLEAN
+    before = (CLEAN / "bhopal_readings_clean.csv").read_bytes()
+    demo = (ROOT_DIR / "frontend" / "demo_2026_ganesh_MADE_UP_VALUES.csv").read_bytes()
+    r = client.post("/upload/preview", content=demo, headers={"content-type": "text/csv"}).json()
+    assert r["ok"] and r["saved"] is False and len(r["steps"]) == 6 and all(s["ok"] for s in r["steps"])
+    assert len(r["ranking"]) == 7 and any("No report PDF for [2026]" in w for w in r["warnings"])
+    assert (CLEAN / "bhopal_readings_clean.csv").read_bytes() == before
+
+
+def test_upload_preview_rejects_duplicates_and_bad_columns():
+    old = (ROOT_DIR / "data" / "readings" / "bhopal_2023_2025.csv").read_bytes()
+    r = client.post("/upload/preview", content=old).json()
+    assert not r["ok"] and "already exist" in r["error"]
+    r = client.post("/upload/preview", content=b"a,b\n1,2\n").json()
+    assert not r["ok"] and "Missing columns" in r["error"]

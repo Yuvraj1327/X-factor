@@ -280,11 +280,64 @@ function limits() {
   </div>`;
 }
 
+function upload() {
+  return `
+  <div class="crumb"><span><a href="#/">प्राथमिकता सूची</a> › नया डेटा जाँचें / Check new data</span></div>
+  <h1 style="font-size:24px;margin:0 0 6px">नया डेटा जाँचें / Check a new readings file</h1>
+  <p class="muted" style="margin:0 0 16px">MPPCB की नई रिपोर्ट (जैसे 2026) की CSV डालें: वही कॉलम जो 2023–2025 फ़ाइल में हैं। पूरी प्रक्रिया सर्वर पर चलती है और नई रैंकिंग दिखती है। <b>कुछ भी सेव नहीं होता</b> (केवल पूर्वावलोकन)।<br>
+  Upload next year's readings CSV (same columns as the 2023–2025 file). The real pipeline runs on the server and shows the new ranking. <b>Nothing is saved</b> (preview only).</p>
+  <div class="grid2">
+    <section class="card">
+      <label class="drop" id="drop"><input type="file" id="file" accept=".csv,text/csv" hidden>
+        <b>CSV फ़ाइल यहाँ छोड़ें या चुनें / Drop or choose a CSV file</b><span class="muted">अधिकतम 2 MB · Max 2 MB</span></label>
+      <div class="btns" style="margin-top:12px"><button class="btn solid" data-demo>डेमो फ़ाइल से चलाएँ / Run with demo file</button>
+        <a class="btn" href="demo_2026_ganesh_MADE_UP_VALUES.csv" download>डेमो CSV डाउनलोड / Download demo CSV</a></div>
+      <p class="muted">डेमो फ़ाइल में गणेश 2026 के <b>काल्पनिक (made-up) मान</b> हैं, केवल प्रक्रिया दिखाने के लिए। The demo file holds made-up Ganesh 2026 values, only to show the flow.</p>
+      <div id="steps"></div>
+    </section>
+    <aside class="card"><h2>जाँच क्या होती है / What is checked</h2><ol class="muted" style="padding-left:18px">
+      <li>फ़ाइल पढ़ना / File read</li><li>सभी 14 कॉलम / All 14 columns present</li>
+      <li>पुराने डेटा से दोहराव नहीं / No duplicates with 2023–2025</li><li>सफ़ाई: हर खाली खाने का कारण / Cleaning: every gap gets a reason</li>
+      <li>हर संख्या की रिपोर्ट PDF / Every reading has a report PDF</li><li>नई रैंकिंग, बदलाव के साथ / Re-rank, with changes</li></ol>
+      <p class="muted">स्थायी रूप से जोड़ने के लिए: CSV को data/readings/ और PDF को reports/ में डालें (README देखें)। To publish: add the CSV to data/readings/ and the PDF to reports/.</p></aside>
+  </div>
+  <section id="result"></section>`;
+}
+
+async function runUpload(body, label) {
+  const steps = $("#steps"), result = $("#result");
+  result.innerHTML = "";
+  steps.innerHTML = `<h3>प्रक्रिया / Processing: ${esc(label)}</h3><p class="muted"><span class="spin"></span> सर्वर पर चल रहा है… / Running on the server…</p>`;
+  const t0 = performance.now();
+  let r;
+  try {
+    r = await fetch(`${API}/upload/preview`, { method: "POST", headers: { "content-type": "text/csv" }, body }).then((x) => x.json());
+  } catch (e) { steps.innerHTML += `<div class="warn">सर्वर से संपर्क नहीं / Could not reach the server (${esc(e.message)})</div>`; return; }
+  const total = Math.round(performance.now() - t0);
+  steps.innerHTML = `<h3>प्रक्रिया / Processing: ${esc(label)}</h3><ol class="steps"></ol>`;
+  const ol = steps.querySelector("ol");
+  for (const s of r.steps) {
+    await new Promise((res) => setTimeout(res, 350)); // reveal one by one; durations shown are the server's real timings
+    ol.insertAdjacentHTML("beforeend", `<li class="${s.ok ? "ok" : "bad"}"><span>${s.ok ? "✓" : "✗"} ${esc(s.name)}</span><span class="ms">${s.ms} ms</span><div class="muted">${esc(s.detail)}</div></li>`);
+  }
+  ol.insertAdjacentHTML("afterend", `<p class="muted">कुल समय (नेटवर्क सहित) / Total time incl. network: ${total} ms · ${r.saved === false ? "सेव नहीं हुआ / not saved" : ""}</p>`);
+  if (!r.ok) { result.innerHTML = `<div class="card warn" style="margin-top:24px"><b>फ़ाइल स्वीकार नहीं / File not accepted:</b> ${esc(r.error)}</div>`; return; }
+  const rows = r.ranking.map((g) => {
+    const move = g.prev_rank == null ? "नया / new" : g.prev_rank === g.rank ? "—" : g.prev_rank > g.rank ? `▲ ${g.prev_rank - g.rank}` : `▼ ${g.rank - g.prev_rank}`;
+    const tierChange = g.prev_tier && g.prev_tier !== g.tier ? ` <span class="muted">(पहले / was ${TIER_HI[g.prev_tier]})</span>` : "";
+    return `<tr><td>${g.rank}</td><td>${esc(g.site)}</td><td><span class="pill ${g.tier}">${TIER_HI[g.tier]}</span>${tierChange}</td><td>${g.points}</td><td class="${move.startsWith("▲") ? "up" : move.startsWith("▼") ? "down" : ""}">${move}</td></tr>`;
+  }).join("");
+  result.innerHTML = `<section class="card" style="margin-top:24px"><h2>नई रैंकिंग (पूर्वावलोकन) / New ranking (preview)</h2>
+    ${r.warnings.length ? `<div class="warn" style="margin:10px 0">${r.warnings.map(esc).join("<br>")}</div>` : ""}
+    <table class="ptable"><thead><tr><th>क्र.</th><th>घाट / Ghat</th><th>स्तर / Tier</th><th>अंक / Points</th><th>बदलाव / Change</th></tr></thead><tbody>${rows}</tbody></table>
+    <p class="muted">यह केवल पूर्वावलोकन है; लाइव सूची नहीं बदली। This is a preview; the live list is unchanged.</p></section>`;
+}
+
 // ---- router & events ----------------------------------------------------------------------------
 let briefLang = "hi";
 async function render() {
   const h = location.hash || "#/";
-  const route = h.startsWith("#/ghat/") ? "home" : h.startsWith("#/brief") ? "brief" : h.startsWith("#/limits") ? "limits" : "home";
+  const route = h.startsWith("#/ghat/") ? "home" : h.startsWith("#/brief") ? "brief" : h.startsWith("#/limits") ? "limits" : h.startsWith("#/upload") ? "upload" : "home";
   document.querySelectorAll(".nav a").forEach((a) => a.classList.toggle("on", a.dataset.route === route));
   const main = $("#main");
   try {
@@ -292,6 +345,7 @@ async function render() {
     if (h.startsWith("#/ghat/")) main.innerHTML = detail(Number(h.split("/")[2]));
     else if (route === "brief") main.innerHTML = await brief(briefLang);
     else if (route === "limits") main.innerHTML = limits();
+    else if (route === "upload") main.innerHTML = upload();
     else main.innerHTML = home();
   } catch (e) {
     main.innerHTML = `<div class="card warn">डेटा लोड नहीं हुआ / Could not load data from the API (${esc(e.message)}). <button class="btn" onclick="location.reload()">Retry</button></div>`;
@@ -313,6 +367,20 @@ document.addEventListener("click", async (ev) => {
   } else if (t.dataset.size !== undefined) {
     document.documentElement.style.setProperty("--fs", { "-1": "13px", "0": "15px", "1": "17px" }[t.dataset.size]);
   } else if (t.id === "contrast") document.body.classList.toggle("contrast");
+  else if (t.hasAttribute("data-demo")) {
+    const csv = await fetch("demo_2026_ganesh_MADE_UP_VALUES.csv").then((x) => x.text());
+    runUpload(csv, "demo_2026_ganesh_MADE_UP_VALUES.csv (डेमो / demo)");
+  }
+});
+document.addEventListener("change", (ev) => {
+  if (ev.target.id === "file" && ev.target.files[0]) runUpload(ev.target.files[0], ev.target.files[0].name);
+});
+document.addEventListener("dragover", (ev) => { if (ev.target.closest("#drop")) ev.preventDefault(); });
+document.addEventListener("drop", (ev) => {
+  if (!ev.target.closest("#drop")) return;
+  ev.preventDefault();
+  const f = ev.dataTransfer.files[0];
+  if (f) runUpload(f, f.name);
 });
 
 const days = Math.ceil((VISARJAN - new Date()) / 86400000);

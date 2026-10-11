@@ -129,3 +129,15 @@ body.contrast .card { border-color: #000; }
   body { background: #fff; } .card { box-shadow: none; break-inside: avoid; }
   .cell, .val, .cov * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+
+/* upload */
+.drop { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; border: 2px dashed var(--grey); border-radius: 8px; padding: 28px; cursor: pointer; background: #FBFCFD; text-align: center; }
+.drop:hover { border-color: var(--navy); }
+.steps { list-style: none; padding: 0; margin: 8px 0; }
+.steps li { display: flex; flex-wrap: wrap; justify-content: space-between; padding: 8px 10px; border: 1px solid #EEF1F4; border-radius: 6px; margin: 6px 0; animation: fadein .3s; }
+.steps li div { flex-basis: 100%; }
+.steps li.ok span:first-child { color: #067647; font-weight: 600; } .steps li.bad span:first-child { color: var(--d); font-weight: 600; }
+.steps .ms { font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--muted); }
+.up { color: var(--d); font-weight: 700; } .down { color: #067647; font-weight: 700; }
+.spin { display: inline-block; width: 12px; height: 12px; border: 2px solid var(--line); border-top-color: var(--navy); border-radius: 50%; animation: spin .8s linear infinite; vertical-align: middle; }
+@keyframes spin { to { transform: rotate(360deg); } } @keyframes fadein { from { opacity: 0; transform: translateY(4px); } }

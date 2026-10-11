@@ -306,8 +306,9 @@ def verification():
             **v.verdict.value_counts().to_dict()}
 
 
-def build():
-    df = pd.read_csv(CLEAN / "bhopal_readings_clean.csv")
+def build(df=None):
+    """df: cleaned readings (as read from CSV); defaults to the committed clean file."""
+    df = pd.read_csv(CLEAN / "bhopal_readings_clean.csv") if df is None else df
     lim = limits()
     latest_durga = int(df[(df.festival == "Durga") & (df.status == "measured")].year.max())
     lower_tag = lower_lake_tag()
